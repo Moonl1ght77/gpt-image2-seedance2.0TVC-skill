@@ -1,0 +1,225 @@
+<!-- 面料详情页 -->
+<view class="page-detail">
+  <loading-mask id="lmask" />
+  <nav-bar show-back="{{true}}" transparent="{{navTransparent}}" />
+
+  <!-- 导航栏高度占位 -->
+  <view style="height: {{navbarHeight}}px;"></view>
+
+  <!-- 面料基本信息 -->
+  <view class="detail-info">
+    <view class="detail-info-header">
+      <view>
+        <text class="detail-name">{{fabric.name}}</text>
+        <text class="detail-name-en">{{fabric.nameEn}}</text>
+      </view>
+      <view class="detail-badge">{{fabric.badge}}</view>
+    </view>
+    <text class="detail-desc">{{fabric.desc}}</text>
+    <view class="detail-tags">
+      <text class="tag" wx:for="{{fabric.tags}}" wx:key="*this">{{item}}</text>
+    </view>
+  </view>
+
+  <!-- 视角切换 -->
+  <view class="view-toggle">
+    <view class="toggle-btn {{viewMode === 'swatch' ? 'toggle-active' : ''}}" bindtap="switchView" data-mode="swatch">
+      <text>色卡视角</text>
+    </view>
+    <view class="toggle-btn {{viewMode === 'product' ? 'toggle-active' : ''}}" bindtap="switchView" data-mode="product">
+      <text>产品视角</text>
+    </view>
+  </view>
+
+  <!-- ========= 产品视角 ========= -->
+  <view wx:if="{{viewMode === 'product'}}">
+
+  <!-- 面料亮点 -->
+  <view class="section-card">
+    <view class="section-title-row">
+      <text class="section-title">面料亮点</text>
+      <text class="section-title-en">HIGHLIGHTS</text>
+    </view>
+    <view class="highlight-list">
+      <view class="highlight-item" wx:for="{{fabric.highlights}}" wx:key="title">
+        <text class="highlight-num">0{{index + 1}}</text>
+        <view class="highlight-body">
+          <text class="highlight-title">{{item.title}}</text>
+          <text class="highlight-desc">{{item.desc}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- Tab 切换：色卡 / 参数 -->
+  <view class="section-card">
+    <view class="tab-header">
+      <view
+        class="tab-item {{activeTab === 'colors' ? 'tab-active' : ''}}"
+        bindtap="switchTab"
+        data-tab="colors"
+      >
+        <text>色卡</text>
+        <view class="tab-line" wx:if="{{activeTab === 'colors'}}"></view>
+      </view>
+      <view class="tab-divider"></view>
+      <view
+        class="tab-item {{activeTab === 'params' ? 'tab-active' : ''}}"
+        bindtap="switchTab"
+        data-tab="params"
+      >
+        <text>参数</text>
+        <view class="tab-line" wx:if="{{activeTab === 'params'}}"></view>
+      </view>
+    </view>
+
+    <!-- 色卡内容 -->
+    <view class="tab-content" wx:if="{{activeTab === 'colors'}}">
+      <view class="color-grid">
+        <view
+          class="color-card tap-effect {{selectedColor === index ? 'color-selected' : ''}}"
+          wx:for="{{fabric.colorCards}}"
+          wx:key="index"
+          bindtap="selectColor"
+          data-index="{{index}}"
+          style="animation-delay: {{index * 0.05}}s"
+        >
+          <view class="color-swatch" style="background: {{item.hex}}">
+            <image class="color-texture" src="{{swatchBase}}/{{item.file ? item.file : fabricId + '-' + item.number + '.png'}}" mode="aspectFill" />
+          </view>
+          <text class="color-number">{{item.number}}</text>
+        </view>
+      </view>
+
+      <!-- 选中色号详情 -->
+      <view class="color-detail" wx:if="{{selectedColor >= 0}}">
+        <view class="color-preview" style="background: {{fabric.colorCards[selectedColor].hex}}">
+          <image class="color-texture" src="{{swatchBase}}/{{fabric.colorCards[selectedColor].file ? fabric.colorCards[selectedColor].file : fabricId + '-' + fabric.colorCards[selectedColor].number + '.png'}}" mode="aspectFill" />
+        </view>
+        <view class="color-info">
+          <text class="color-name">色号 {{fabric.colorCards[selectedColor].number}}</text>
+          <text class="color-hex">{{fabric.colorCards[selectedColor].name}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 参数内容 -->
+    <view class="tab-content" wx:if="{{activeTab === 'params'}}">
+      <view class="param-list">
+        <view class="param-item" wx:for="{{fabric.params}}" wx:key="label">
+          <text class="param-label">{{item.label}}</text>
+          <text class="param-value">{{item.value}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 适用场景 -->
+  <view class="section-card">
+    <view class="section-title-row">
+      <text class="section-title">适用场景</text>
+      <text class="section-title-en">SCENARIOS</text>
+    </view>
+    <view class="scene-tags">
+      <text class="scene-tag" wx:for="{{fabric.scenes}}" wx:key="title">{{item.title}}</text>
+    </view>
+  </view>
+
+  <!-- 面料故事 -->
+  <view class="section-card story-card">
+    <view class="section-title-row">
+      <text class="section-title">面料故事</text>
+      <text class="section-title-en">STORY</text>
+    </view>
+    <text class="story-text">{{fabric.story}}</text>
+  </view>
+
+  <!-- 洗护指南 -->
+  <view class="section-card">
+    <view class="section-title-row">
+      <text class="section-title">洗护指南</text>
+      <text class="section-title-en">CARE GUIDE</text>
+    </view>
+    <view class="care-list">
+      <view class="care-item" wx:for="{{fabric.careGuide}}" wx:key="title">
+        <view class="care-accent"></view>
+        <view class="care-text">
+          <text class="care-title">{{item.title}}</text>
+          <text class="care-desc">{{item.desc}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 询价引导 -->
+  <view class="cta-card">
+    <text class="cta-title">对这款面料感兴趣？</text>
+    <text class="cta-desc">支持免费寄样 · 专属色号定制 · 小批量起订</text>
+  </view>
+
+  </view><!-- 产品视角结束 -->
+
+  <!-- ========= 色卡视角 ========= -->
+  <view wx:if="{{viewMode === 'swatch'}}">
+
+    <!-- 当前选中色号大展示 -->
+    <view class="swatch-hero" style="background: {{fabric.colorCards[selectedColor].hex}}">
+      <image class="swatch-hero-texture" src="{{swatchBase}}/{{fabric.colorCards[selectedColor].file ? fabric.colorCards[selectedColor].file : fabricId + '-' + fabric.colorCards[selectedColor].number + '.png'}}" mode="aspectFill" bindtap="previewSwatchImage" />
+      <view class="swatch-hero-shine"></view>
+      <view class="swatch-hero-info">
+        <text class="swatch-hero-number">{{fabric.colorCards[selectedColor].number}}</text>
+        <text class="swatch-hero-name">{{fabric.colorCards[selectedColor].name}}</text>
+      </view>
+    </view>
+
+    <!-- 色号横滑选择 -->
+    <scroll-view class="swatch-strip" scroll-x enhanced show-scrollbar="{{false}}">
+      <view class="swatch-strip-list">
+        <view
+          class="strip-item {{selectedColor === index ? 'strip-active' : ''}}"
+          wx:for="{{fabric.colorCards}}"
+          wx:key="number"
+          bindtap="selectColor"
+          data-index="{{index}}"
+        >
+          <view class="strip-color" style="background: {{item.hex}}"></view>
+          <text class="strip-number">{{item.number}}</text>
+        </view>
+      </view>
+    </scroll-view>
+
+    <!-- 色号详细信息 -->
+    <view class="section-card">
+      <view class="swatch-detail-row">
+        <text class="swatch-detail-label">色号</text>
+        <text class="swatch-detail-value">{{fabric.colorCards[selectedColor].number}}</text>
+      </view>
+      <view class="swatch-detail-row">
+        <text class="swatch-detail-label">色名</text>
+        <text class="swatch-detail-value">{{fabric.colorCards[selectedColor].name}}</text>
+      </view>
+      <view class="swatch-detail-row">
+        <text class="swatch-detail-label">面料</text>
+        <text class="swatch-detail-value">{{fabric.name}}</text>
+      </view>
+      <view class="swatch-detail-row">
+        <text class="swatch-detail-label">库存</text>
+        <text class="swatch-detail-value swatch-stock">现货可发</text>
+      </view>
+    </view>
+
+    <!-- 查看全部色卡 -->
+    <view class="go-swatch-btn" bindtap="goSwatchLibrary">
+      <text>查看全部色卡库 →</text>
+    </view>
+
+  </view><!-- 色卡视角结束 -->
+
+  <!-- 底部操作栏 -->
+  <view class="detail-bottom">
+    <view class="bottom-btn btn-inquiry tap-effect" bindtap="onInquiry">
+      <text>立即询价</text>
+    </view>
+  </view>
+
+</view>

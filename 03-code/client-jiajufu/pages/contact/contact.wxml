@@ -1,0 +1,97 @@
+<!-- 联系我们 — 高级品牌风 -->
+<view class="page-contact page-transition" style="{{pageAnimStyle}}">
+  <loading-mask id="lmask" />
+  <nav-bar />
+  <view style="height: {{navbarHeight}}px;"></view>
+
+  <!-- 头部 -->
+  <view class="contact-hero">
+    <text class="hero-en">GET IN TOUCH</text>
+    <text class="hero-title">联系我们</text>
+    <view class="hero-divider"></view>
+    <text class="hero-desc">专业面料顾问，为您的品牌甄选最合适的材质</text>
+  </view>
+
+  <!-- 联系方式 -->
+  <view class="contact-section">
+    <view class="contact-btn-card tap-effect" bindtap="callPhone">
+      <view class="contact-btn-left">
+        <text class="contact-btn-label">一键拨打</text>
+        <text class="contact-btn-value">{{contactPhone}}</text>
+      </view>
+      <view class="contact-btn-tag"><text>立即拨打</text></view>
+    </view>
+
+    <view class="contact-btn-card contact-btn-wechat tap-effect" bindtap="copyWechat">
+      <view class="contact-btn-left">
+        <text class="contact-btn-label">微信咨询</text>
+        <text class="contact-btn-value">{{contactWechat}}</text>
+      </view>
+      <view class="contact-btn-tag contact-tag-wechat"><text>复制微信号</text></view>
+    </view>
+
+    <view class="contact-meta">
+      <text class="meta-text">工作时间：周一至周六 09:00 – 18:00</text>
+      <text class="meta-text">{{address}}</text>
+    </view>
+  </view>
+
+  <!-- 装饰分隔 -->
+  <view class="section-separator">
+    <view class="sep-line"></view>
+    <text class="sep-diamond">◇</text>
+    <view class="sep-line"></view>
+  </view>
+
+  <!-- 快捷询价 -->
+  <view class="inquiry-section">
+    <text class="section-en">INQUIRY</text>
+    <text class="section-title">获取专属报价</text>
+    <text class="section-hint">留下需求，专属顾问 24 小时内跟进</text>
+
+    <view class="trust-badges">
+      <text class="trust-badge">免费寄样</text>
+      <text class="trust-badge">24h 响应</text>
+      <text class="trust-badge">小批量起订</text>
+    </view>
+
+    <view class="inquiry-form">
+      <view class="form-group">
+        <text class="form-label">称呼</text>
+        <input class="form-input" placeholder="您的称呼" placeholder-class="form-placeholder" bindinput="onNameInput" value="{{formName}}" />
+      </view>
+
+      <view class="form-group">
+        <text class="form-label">电话</text>
+        <input class="form-input" placeholder="联系电话" placeholder-class="form-placeholder" type="number" bindinput="onPhoneInput" value="{{formPhone}}" />
+      </view>
+
+      <view class="form-group">
+        <text class="form-label">面料需求</text>
+        <input class="form-input" placeholder="如：云皱棉、兰精莫代尔罗纹..." placeholder-class="form-placeholder" bindinput="onFabricInput" value="{{formFabric}}" />
+      </view>
+
+      <view class="form-group">
+        <text class="form-label">备注</text>
+        <textarea class="form-textarea" placeholder="其他需要说明的（选填）" placeholder-class="form-placeholder" bindinput="onRemarkInput" value="{{formRemark}}" />
+      </view>
+
+      <view class="form-submit tap-effect" bindtap="submitInquiry">
+        <text class="submit-text">立即获取报价 ›</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部签名 -->
+  <view class="contact-footer">
+    <view class="footer-line"></view>
+    <text class="footer-brand">LESHUN TEXTILE</text>
+    <text class="footer-note">期待与您合作</text>
+  </view>
+
+  <!-- 商家专用：开启询价通知（极小，普通客户不会注意） -->
+  <view class="merchant-notify-btn tap-effect" bindtap="subscribeMerchantNotify">
+    <text class="merchant-notify-text">· 商家通知设置 ·</text>
+  </view>
+
+</view>

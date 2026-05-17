@@ -1,0 +1,87 @@
+{
+  "29": {
+    "inputs": {
+      "direction": "图生图",
+      "mode": "默认",
+      "quality": "auto",
+      "resolution": "1K",
+      "aspect_ratio": "3:4",
+      "count": 1,
+      "seed": 250116779,
+      "prompt": "",
+      "prompts_list": [
+        "25",
+        0
+      ],
+      "image1": [
+        "30",
+        0
+      ],
+      "image2": [
+        "30",
+        0
+      ],
+      "image3": [
+        "35",
+        0
+      ]
+    },
+    "class_type": "SynVowGptImage2",
+    "_meta": {
+      "title": "SynVow GPT-Image-2"
+    }
+  },
+  "25": {
+    "inputs": {
+      "separator": " ,",
+      "text1": [
+        "31",
+        0
+      ]
+    },
+    "class_type": "CR Text Concatenate",
+    "_meta": {
+      "title": "CR Text Concatenate"
+    }
+  },
+  "30": {
+    "inputs": {
+      "image": "面料细节图.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "面料细节图"
+    }
+  },
+  "31": {
+    "inputs": {
+      "prompt": ""
+    },
+    "class_type": "CR Prompt Text",
+    "_meta": {
+      "title": "换色提示词"
+    }
+  },
+  "35": {
+    "inputs": {
+      "image": "swatches/3092-swatch-01.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "色块参考图"
+    }
+  },
+  "26": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "29",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  }
+}

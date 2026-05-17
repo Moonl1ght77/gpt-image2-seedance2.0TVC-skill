@@ -1,0 +1,23 @@
+<!-- 自定义导航栏组件 -->
+<view
+  class="nav-wrap {{transparent ? 'nav-transparent' : 'nav-solid'}}"
+  style="height: {{navbarHeight}}px; padding-top: {{statusBarHeight}}px;"
+>
+  <view class="nav-inner" style="height: {{rowHeight}}px; padding-right: {{capsuleWidth}}px;">
+    <!-- 左按钮：搜索 or 返回 -->
+    <view class="nav-left" bindtap="onLeftTap">
+      <view wx:if="{{showBack}}" class="back-icon {{transparent ? 'icon-light' : 'icon-dark'}}"></view>
+      <block wx:else>
+        <view class="search-lens {{transparent ? 'icon-light' : 'icon-dark'}}"></view>
+        <view class="search-stick {{transparent ? 'stick-light' : 'stick-dark'}}"></view>
+      </block>
+    </view>
+    <!-- 中间品牌 Logo -->
+    <image
+      class="nav-logo"
+      src="/assets/logo-divider.png"
+      mode="aspectFit"
+      style="filter: {{transparent ? 'invert(1)' : 'none'}};"
+    />
+  </view>
+</view>

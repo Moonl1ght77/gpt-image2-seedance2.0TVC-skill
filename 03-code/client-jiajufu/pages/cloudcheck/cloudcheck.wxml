@@ -1,0 +1,51 @@
+<!-- 云存储诊断页（开发专用，上线前可删除） -->
+<view class="page">
+
+  <view class="header">
+    <text class="title">云存储诊断</text>
+    <text class="subtitle">检测所有 cloud:// 图片/视频是否已上传</text>
+  </view>
+
+  <!-- 总览 -->
+  <view class="summary" wx:if="{{!checking}}">
+    <view class="sum-item ok">
+      <text class="sum-num">{{okCount}}</text>
+      <text class="sum-label">已存在</text>
+    </view>
+    <view class="sum-item fail">
+      <text class="sum-num">{{failCount}}</text>
+      <text class="sum-label">缺失</text>
+    </view>
+    <view class="sum-item total">
+      <text class="sum-num">{{total}}</text>
+      <text class="sum-label">共检测</text>
+    </view>
+  </view>
+
+  <!-- 检测中 -->
+  <view class="checking-tip" wx:if="{{checking}}">
+    <text>⏳ 检测中，请稍候...</text>
+  </view>
+
+  <!-- 结果列表 -->
+  <scroll-view scroll-y style="height: calc(100vh - 280rpx);" class="list">
+    <view
+      class="item {{item.ok ? 'item-ok' : 'item-fail'}}"
+      wx:for="{{results}}"
+      wx:key="id"
+    >
+      <text class="item-icon">{{item.ok ? '✅' : '❌'}}</text>
+      <view class="item-info">
+        <text class="item-name">{{item.label}}</text>
+        <text class="item-path">{{item.shortPath}}</text>
+        <text class="item-err" wx:if="{{!item.ok}}">{{item.errMsg}}</text>
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- 重新检测 -->
+  <view class="recheck-btn tap-effect" bindtap="startCheck">
+    <text>重新检测</text>
+  </view>
+
+</view>

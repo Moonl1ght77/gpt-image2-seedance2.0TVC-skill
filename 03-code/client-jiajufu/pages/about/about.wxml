@@ -1,0 +1,95 @@
+<!-- 关于我们 — 高级品牌风 -->
+<view class="page-about page-transition" style="{{pageAnimStyle}}">
+  <loading-mask id="lmask" />
+  <nav-bar />
+  <view style="height: {{navbarHeight}}px;"></view>
+
+  <!-- 品牌头图 -->
+  <view class="about-hero">
+    <view class="hero-bg">
+      <view class="hero-overlay">
+        <text class="hero-en">LESHUN TEXTILE</text>
+        <text class="hero-title">乐顺科纺</text>
+        <view class="hero-divider"></view>
+        <text class="hero-philosophy">{{brandPhilosophy}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 品牌故事 -->
+  <view class="about-section">
+    <text class="section-en">OUR STORY</text>
+    <text class="section-title">品牌故事</text>
+    <view class="story-content">
+      <view class="story-quote-mark">"</view>
+      <text class="story-text">{{brandStory}}</text>
+    </view>
+  </view>
+
+  <!-- 装饰分隔 -->
+  <view class="section-separator">
+    <view class="sep-line"></view>
+    <text class="sep-diamond">◇</text>
+    <view class="sep-line"></view>
+  </view>
+
+  <!-- 核心数据 -->
+  <view class="about-section">
+    <text class="section-en">KEY FIGURES</text>
+    <text class="section-title">核心数据</text>
+    <view class="strength-row">
+      <view class="strength-item" wx:for="{{strengths}}" wx:key="index">
+        <view class="strength-num-wrap">
+          <text class="strength-number">{{item.number}}</text>
+          <text class="strength-unit">{{item.unit}}</text>
+        </view>
+        <text class="strength-label">{{item.label}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 品牌价值 -->
+  <view class="about-section values-section">
+    <text class="section-en">OUR VALUES</text>
+    <text class="section-title">品牌价值</text>
+    <view class="values-list">
+      <view class="value-card" wx:for="{{values}}" wx:key="index">
+        <view class="value-left">
+          <text class="value-symbol">{{item.symbol}}</text>
+          <text class="value-index">0{{index + 1}}</text>
+        </view>
+        <view class="value-right">
+          <text class="value-title">{{item.title}}</text>
+          <text class="value-desc">{{item.desc}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 合作流程 -->
+  <view class="about-section process-section">
+    <text class="section-en">PROCESS</text>
+    <text class="section-title">合作流程</text>
+    <view class="process-timeline">
+      <view class="process-item" wx:for="{{processes}}" wx:key="index">
+        <view class="process-left">
+          <view class="process-dot"></view>
+          <view class="process-connector" wx:if="{{index < processes.length - 1}}"></view>
+        </view>
+        <view class="process-right">
+          <text class="process-step-num">STEP 0{{index + 1}}</text>
+          <text class="process-title">{{item.title}}</text>
+          <text class="process-desc">{{item.desc}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部品牌签名 -->
+  <view class="about-footer">
+    <view class="footer-line"></view>
+    <text class="footer-brand">LESHUN TEXTILE</text>
+    <text class="footer-slogan">用心织造，温暖每一个家</text>
+  </view>
+
+</view>

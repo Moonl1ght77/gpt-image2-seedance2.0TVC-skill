@@ -1,0 +1,94 @@
+<!-- 色卡库页面 -->
+<view class="page-swatch page-transition" style="{{pageAnimStyle}}">
+  <loading-mask id="lmask" />
+  <nav-bar />
+  <view style="height: {{navbarHeight}}px;"></view>
+
+  <!-- 顶部标题区 -->
+  <view class="swatch-header">
+    <text class="swatch-title">色卡库</text>
+    <text class="swatch-title-en">SWATCH LIBRARY</text>
+    <text class="swatch-subtitle">精选{{totalColors}}款色号，触摸每一种温暖</text>
+  </view>
+
+  <!-- 面料分类横滑 -->
+  <scroll-view class="fabric-tabs" scroll-x enhanced show-scrollbar="{{false}}">
+    <view class="fabric-tab-list">
+      <view
+        class="fabric-tab {{activeFabric === index ? 'fabric-tab-active' : ''}}"
+        wx:for="{{fabrics}}"
+        wx:key="id"
+        bindtap="onFabricTab"
+        data-index="{{index}}"
+      >
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- 当前面料信息 -->
+  <view class="fabric-brief">
+    <view class="brief-left">
+      <text class="brief-name">{{currentFabric.name}}</text>
+      <text class="brief-en">{{currentFabric.nameEn}}</text>
+    </view>
+    <view class="brief-right">
+      <text class="brief-count">{{currentFabric.colorCards.length}} 色</text>
+    </view>
+  </view>
+
+  <!-- 色卡网格 -->
+  <view class="swatch-grid">
+    <view
+      class="swatch-card"
+      wx:for="{{currentFabric.colorCards}}"
+      wx:key="number"
+      bindtap="onSwatchTap"
+      data-fabric-index="{{activeFabric}}"
+      data-color-index="{{index}}"
+      style="animation-delay: {{index * 0.04}}s"
+    >
+      <!-- 色块（真实面料图） -->
+      <view class="swatch-color" style="background: {{item.hex}}">
+        <image class="swatch-color-img" src="{{swatchBase}}/{{item.file ? item.file : currentFabric.id + '-' + item.number + '.png'}}" mode="aspectFill" />
+      </view>
+      <!-- 信息 -->
+      <view class="swatch-info">
+        <text class="swatch-number">{{item.number}}</text>
+        <text class="swatch-name">{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 其他面料预览 -->
+  <view class="other-fabrics">
+    <view class="other-title-row">
+      <text class="other-title">其他面料</text>
+      <text class="other-title-en">MORE FABRICS</text>
+    </view>
+    <view class="other-list">
+      <view
+        class="other-card"
+        wx:for="{{fabrics}}"
+        wx:key="id"
+        wx:if="{{index !== activeFabric}}"
+        bindtap="onFabricTab"
+        data-index="{{index}}"
+      >
+        <!-- 前3个色号预览 -->
+        <view class="other-colors">
+          <view
+            class="other-dot"
+            wx:for="{{item.previewColors}}"
+            wx:for-item="color"
+            wx:key="*this"
+            style="background: {{color}}"
+          ></view>
+        </view>
+        <text class="other-name">{{item.name}}</text>
+        <text class="other-count">{{item.colorCards.length}} 色</text>
+      </view>
+    </view>
+  </view>
+
+</view>

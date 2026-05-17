@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>面料 3D 服装导出工具</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Fabric 3D Generator</p>
+          <h1>面料 3D 服装导出工具</h1>
+        </div>
+        <div class="topbar-actions">
+          <button class="icon-button" id="reset-camera" type="button" title="重置视角">
+            <i data-lucide="rotate-3d"></i>
+          </button>
+          <button class="primary-button" id="export-package" type="button">
+            <i data-lucide="package-down"></i>
+            <span>导出文件包</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <section class="viewer-panel" aria-label="3D 预览">
+          <canvas id="scene-canvas"></canvas>
+          <div class="status-strip">
+            <div>
+              <span class="status-dot"></span>
+              <span id="status-text">正在载入默认面料</span>
+            </div>
+            <span id="active-preset">homewear-long-set</span>
+          </div>
+        </section>
+
+        <aside class="control-panel">
+          <section class="panel-section">
+            <div class="section-header">
+              <h2>面料来源</h2>
+              <label class="upload-button" for="fabric-upload">
+                <i data-lucide="upload"></i>
+                <span>上传</span>
+              </label>
+              <input id="fabric-upload" type="file" accept="image/png,image/jpeg" />
+            </div>
+            <div class="sample-grid" id="sample-grid" aria-label="样例面料"></div>
+          </section>
+
+          <section class="panel-section">
+            <div class="section-header">
+              <h2>材质参数</h2>
+              <button class="text-button" id="reset-material" type="button">
+                <i data-lucide="refresh-cw"></i>
+                <span>重置</span>
+              </button>
+            </div>
+
+            <div class="fabric-summary">
+              <div class="texture-chip" id="texture-chip"></div>
+              <div>
+                <strong id="fabric-name">-</strong>
+                <span id="fabric-meta">等待分析</span>
+              </div>
+            </div>
+
+            <div class="control-stack">
+              <label>
+                <span>横向重复</span>
+                <input id="repeat-x" type="range" min="1" max="8" step="0.25" value="3" />
+                <output id="repeat-x-value">3.00</output>
+              </label>
+              <label>
+                <span>纵向重复</span>
+                <input id="repeat-y" type="range" min="1" max="8" step="0.25" value="3" />
+                <output id="repeat-y-value">3.00</output>
+              </label>
+              <label>
+                <span>纹理旋转</span>
+                <input id="rotation" type="range" min="-180" max="180" step="1" value="0" />
+                <output id="rotation-value">0°</output>
+              </label>
+              <label>
+                <span>粗糙度</span>
+                <input id="roughness" type="range" min="0.35" max="1" step="0.01" value="0.85" />
+                <output id="roughness-value">0.85</output>
+              </label>
+              <label>
+                <span>凹凸强度</span>
+                <input id="normal-strength" type="range" min="0" max="1" step="0.01" value="0.35" />
+                <output id="normal-strength-value">0.35</output>
+              </label>
+            </div>
+          </section>
+
+          <section class="panel-section compact">
+            <h2>分析结果</h2>
+            <dl class="analysis-list">
+              <div>
+                <dt>主色</dt>
+                <dd id="base-color">-</dd>
+              </div>
+              <div>
+                <dt>亮度对比</dt>
+                <dd id="contrast-value">-</dd>
+              </div>
+              <div>
+                <dt>导出格式</dt>
+                <dd>GLB / PNG / JSON</dd>
+              </div>
+            </dl>
+          </section>
+        </aside>
+      </main>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

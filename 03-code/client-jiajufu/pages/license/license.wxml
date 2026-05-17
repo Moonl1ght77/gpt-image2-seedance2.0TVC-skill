@@ -1,0 +1,29 @@
+<!-- 电子营业执照页 -->
+<view class="page-license">
+
+  <!-- 自定义导航栏 -->
+  <view class="license-navbar" style="padding-top: {{statusBarHeight}}px;">
+    <view class="navbar-row">
+      <view class="navbar-back tap-effect" bindtap="goBack">
+        <text class="back-arrow">‹</text>
+        <text class="back-text">返回</text>
+      </view>
+      <text class="navbar-title">电子营业执照</text>
+      <view class="navbar-placeholder"></view>
+    </view>
+  </view>
+
+  <!-- 执照图片区 -->
+  <view class="license-body">
+    <view wx:if="{{loading}}" class="license-loading">
+      <text class="loading-text">加载中...</text>
+    </view>
+    <view wx:elif="{{imageUrl}}" class="license-image-wrap">
+      <image class="license-image" src="{{imageUrl}}" mode="widthFix" show-menu-by-longpress="{{true}}" />
+    </view>
+    <view wx:else class="license-error">
+      <text class="error-text">加载失败，请返回重试</text>
+    </view>
+  </view>
+
+</view>

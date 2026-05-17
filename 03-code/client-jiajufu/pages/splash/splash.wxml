@@ -1,0 +1,5 @@
+<view class="splash-page">
+  <view class="splash-center {{animClass}}">
+    <image class="splash-logo" src="/assets/logo-divider.png" mode="aspectFit" />
+  </view>
+</view>

@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "WebSearch",
+      "Bash(gh repo *)",
+      "Bash(claude plugin *)",
+      "Bash(ls -la \"C:/Users/Administrator/.claude/plugins/superpowers/\")",
+      "Read(//c/Users/Administrator/.claude/plugins/superpowers/**)",
+      "Bash(claude --version)",
+      "Bash(export PATH=\"$PATH:/c/Users/Administrator/.bun/bin\")",
+      "Bash(mkdir -p \"e:/微信小程序开发总文件/.vscode\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git *)"
+    ],
+    "additionalDirectories": [
+      "e:\\微信小程序开发总文件"
+    ]
+  }
+}

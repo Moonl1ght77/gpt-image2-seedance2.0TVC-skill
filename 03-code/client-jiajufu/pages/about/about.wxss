@@ -1,0 +1,221 @@
+/* 关于我们 — 高级品牌风 */
+.page-about {
+  overflow-x: hidden;
+  background: linear-gradient(to bottom, #4A4238 0%, #342E28 15%, #241E18 35%, #1A1612 55%);
+  background-attachment: fixed;
+  padding-bottom: calc(180rpx + env(safe-area-inset-bottom));
+}
+
+/* ---- 品牌头图 ---- */
+.about-hero { height: 480rpx; }
+.hero-bg {
+  width: 100%; height: 100%;
+  background: linear-gradient(160deg, #4A4238 0%, #3A3028 40%, #2A2420 100%);
+}
+.hero-overlay {
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+}
+.hero-en {
+  font-size: 20rpx; color: rgba(255,255,255,0.35);
+  letter-spacing: 8rpx; font-weight: 300;
+}
+.hero-title {
+  font-size: 56rpx; font-weight: 700; color: #FFF;
+  font-family: 'Songti SC', 'STSong', 'Noto Serif CJK SC', 'SimSun', serif;
+  letter-spacing: 16rpx; margin-top: 12rpx;
+}
+.hero-divider {
+  width: 48rpx; height: 2rpx;
+  background: rgba(255,255,255,0.4); margin: 28rpx 0;
+}
+.hero-philosophy {
+  font-size: 24rpx; color: rgba(255,255,255,0.7);
+  letter-spacing: 4rpx; font-weight: 300;
+}
+
+/* ---- 通用 section ---- */
+.about-section { padding: 48rpx 40rpx 32rpx; }
+.section-en {
+  font-size: 20rpx; color: #8A8078; letter-spacing: 6rpx;
+  font-weight: 300; display: block;
+}
+.section-title {
+  font-size: 36rpx; font-weight: 700; color: #EDE8E2;
+  letter-spacing: 4rpx; margin-top: 8rpx; display: block;
+  font-family: 'Songti SC', 'STSong', 'Noto Serif CJK SC', 'SimSun', serif;
+}
+
+/* ---- 装饰分隔 ---- */
+.section-separator {
+  display: flex; align-items: center;
+  justify-content: center; padding: 16rpx 60rpx;
+}
+.sep-line {
+  flex: 1; height: 1rpx;
+  background: linear-gradient(90deg, transparent, #3A3028, transparent);
+}
+.sep-diamond {
+  font-size: 22rpx; color: #7A7068;
+  margin: 0 20rpx;
+}
+
+/* ---- 品牌故事 ---- */
+.story-content {
+  margin-top: 24rpx; position: relative;
+  padding-left: 32rpx;
+  border-left: 3rpx solid #4A4038;
+}
+.story-quote-mark {
+  position: absolute; top: -20rpx; left: -8rpx;
+  font-size: 80rpx; color: #3A3028; font-family: Georgia, serif;
+  line-height: 1;
+}
+.story-text {
+  font-size: 28rpx; color: #A09888; line-height: 2;
+  letter-spacing: 1rpx;
+}
+
+/* ---- 核心数据 ---- */
+.strength-row {
+  display: flex; justify-content: space-between;
+  margin-top: 32rpx; padding: 32rpx 0;
+  border-top: 1rpx solid #2E2822;
+  border-bottom: 1rpx solid #2E2822;
+}
+.strength-item {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center;
+}
+.strength-num-wrap { display: flex; align-items: baseline; }
+.strength-number {
+  font-size: 48rpx; font-weight: 700; color: #8B7355;
+  line-height: 1;
+}
+.strength-unit {
+  font-size: 22rpx; color: #8B7355; margin-left: 2rpx;
+  font-weight: 300;
+}
+.strength-label {
+  font-size: 22rpx; color: #8A8078; margin-top: 8rpx;
+  letter-spacing: 2rpx;
+}
+
+/* ---- 品牌价值 ---- */
+.values-list { margin-top: 24rpx; }
+.value-card {
+  display: flex; align-items: flex-start;
+  padding: 28rpx 0;
+  border-bottom: 1rpx solid #2E2822;
+}
+.value-card:last-child { border-bottom: none; }
+.value-left {
+  width: 80rpx; flex-shrink: 0;
+  display: flex; flex-direction: column;
+  align-items: center;
+}
+.value-symbol { font-size: 28rpx; color: #A6896B; }
+.value-index {
+  font-size: 18rpx; color: #7A7068; font-weight: 300;
+  margin-top: 4rpx;
+}
+.value-right { flex: 1; }
+.value-title {
+  font-size: 30rpx; font-weight: 600; color: #EDE8E2;
+  letter-spacing: 2rpx; display: block;
+}
+.value-desc {
+  font-size: 24rpx; color: #9A9088; line-height: 1.7;
+  margin-top: 6rpx; display: block;
+}
+
+/* ---- 面料系列 ---- */
+.fabric-list { margin-top: 24rpx; }
+.fabric-row {
+  display: flex; align-items: center;
+  padding: 24rpx 0;
+  border-bottom: 1rpx solid #2E2822;
+}
+.fabric-row:last-child { border-bottom: none; }
+.fabric-name {
+  font-size: 28rpx; font-weight: 600; color: #EDE8E2;
+  letter-spacing: 2rpx; flex-shrink: 0;
+}
+.fabric-dot-line {
+  flex: 1; height: 1rpx; margin: 0 16rpx;
+  border-bottom: 2rpx dotted #3A3028;
+}
+.fabric-meta {
+  display: flex; flex-direction: column;
+  align-items: flex-end; flex-shrink: 0;
+}
+.fabric-spec {
+  font-size: 22rpx; color: #9A9088; letter-spacing: 1rpx;
+}
+.fabric-feature {
+  font-size: 20rpx; color: #7A7068; margin-top: 4rpx;
+}
+
+/* ---- 合作流程 ---- */
+.process-timeline { margin-top: 28rpx; }
+.process-item {
+  display: flex; position: relative;
+  padding-bottom: 40rpx;
+}
+.process-item:last-child { padding-bottom: 0; }
+.process-left {
+  width: 40rpx; display: flex; flex-direction: column;
+  align-items: center; flex-shrink: 0;
+}
+.process-dot {
+  width: 16rpx; height: 16rpx; border-radius: 50%;
+  border: 3rpx solid #A6896B;
+  background: transparent;
+}
+.process-connector {
+  width: 2rpx; flex: 1; min-height: 60rpx;
+  background: #3A3028; margin-top: 8rpx;
+}
+.process-right {
+  margin-left: 20rpx; padding-top: -4rpx;
+}
+.process-step-num {
+  font-size: 18rpx; color: #7A7068; letter-spacing: 4rpx;
+  font-weight: 300; display: block;
+}
+.process-title {
+  font-size: 30rpx; font-weight: 600; color: #EDE8E2;
+  margin-top: 4rpx; display: block;
+}
+.process-desc {
+  font-size: 24rpx; color: #9A9088; margin-top: 4rpx;
+  display: block;
+}
+
+/* ---- 底部签名 ---- */
+.about-footer {
+  display: flex; flex-direction: column;
+  align-items: center; padding: 48rpx 40rpx 32rpx;
+}
+.footer-line {
+  width: 40rpx; height: 2rpx; background: #3A3028;
+  margin-bottom: 20rpx;
+}
+.footer-brand {
+  font-size: 20rpx; color: #8A8078; letter-spacing: 8rpx;
+  font-weight: 300;
+}
+.footer-slogan {
+  font-size: 24rpx; color: #7A7068; margin-top: 8rpx;
+  letter-spacing: 4rpx;
+}
+
+/* ---- 底部到 tabBar 过渡渐变 ---- */
+.page-about::after {
+  content: '';
+  display: block;
+  height: 120rpx;
+  background: linear-gradient(to bottom, transparent, rgba(26,22,18,0.6));
+  margin-top: -32rpx;
+}

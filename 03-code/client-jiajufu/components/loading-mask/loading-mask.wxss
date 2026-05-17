@@ -1,0 +1,37 @@
+.lm-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 9999;
+  background: linear-gradient(180deg, #F7F3EF 0%, #EDE6DC 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.lm-show {
+  opacity: 1;
+  transition: opacity 0.15s ease-in;
+}
+
+.lm-hide {
+  opacity: 0;
+  transition: opacity 0.25s ease-out;
+}
+
+.lm-logo {
+  width: 360rpx;
+  height: 96rpx;
+  opacity: 0.12;
+  mix-blend-mode: multiply;
+}
+
+/* logo 由浅到深 */
+.lm-logo-in {
+  animation: logoReveal 0.35s ease-out forwards;
+}
+
+@keyframes logoReveal {
+  0%   { opacity: 0.12; }
+  100% { opacity: 0.75; }
+}

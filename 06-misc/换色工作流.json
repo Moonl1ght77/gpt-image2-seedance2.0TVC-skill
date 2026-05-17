@@ -1,0 +1,85 @@
+{
+  "25": {
+    "inputs": {
+      "separator": " ,",
+      "text1": [
+        "31",
+        0
+      ]
+    },
+    "class_type": "CR Text Concatenate",
+    "_meta": {
+      "title": "🔤 CR Text Concatenate"
+    }
+  },
+  "26": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "29",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "28": {
+    "inputs": {
+      "preview_markdown": "",
+      "preview_text": "",
+      "previewMode": null,
+      "source": [
+        "25",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "预览任意"
+    }
+  },
+  "29": {
+    "inputs": {
+      "direction": "图生图",
+      "mode": "默认",
+      "quality": "auto",
+      "resolution": "1K",
+      "aspect_ratio": "1:1",
+      "count": 1,
+      "seed": 250116779,
+      "prompt": "",
+      "prompts_list": [
+        "25",
+        0
+      ],
+      "image1": [
+        "30",
+        0
+      ]
+    },
+    "class_type": "SynVowGptImage2",
+    "_meta": {
+      "title": "SynVow GPT-Image-2"
+    }
+  },
+  "30": {
+    "inputs": {
+      "image": "面料细节图.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "31": {
+    "inputs": {
+      "prompt": "(NO TEXT, NO LETTERS, NO HUMANS), act as a professional digital textile colorist.\n[Core Task]: RECOLOR ONLY. Change the color of the fabric in the reference images from cream to a sophisticated \"Matte Sage Green\" (muted earth-tone green).\n[Strict Consistency]: DO NOT change the composition, the position of the folds, or the geometric texture. Maintain the exact diagonal \"Diamond-Grid\" structure and the 3D undulating hills of the fabric drapes.\n[Material Integrity]: The texture must remain crisp and sharp. Ensure the new green color has realistic highlights and shadows that perfectly follow the original 3D volume of the waffle-knit weave.\n[Final Quality]: 8k resolution, ultra-photorealistic, high-fidelity color swap. The result must look like the original photo was professionally dyed, keeping all physical details intact."
+    },
+    "class_type": "CR Prompt Text",
+    "_meta": {
+      "title": "⚙️ CR Prompt Text"
+    }
+  }
+}

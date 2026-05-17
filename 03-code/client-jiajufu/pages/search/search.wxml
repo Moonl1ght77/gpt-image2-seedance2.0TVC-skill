@@ -1,0 +1,123 @@
+<!-- 搜索页 -->
+<view class="page-search">
+
+  <!-- 顶部搜索栏 -->
+  <view class="search-bar-wrap" style="padding-top: {{navbarHeight + 16}}px;">
+    <view class="search-back tap-effect" bindtap="goBack">
+      <text class="back-icon">‹</text>
+    </view>
+    <view class="search-input-box">
+      <input
+        class="search-input"
+        placeholder="搜索面料名称、成分、色号..."
+        placeholder-class="search-ph"
+        value="{{keyword}}"
+        bindinput="onInput"
+        bindconfirm="doSearch"
+        focus="{{autoFocus}}"
+        confirm-type="search"
+      />
+      <text class="search-clear tap-effect" wx:if="{{keyword}}" bindtap="clearKeyword">✕</text>
+    </view>
+    <text class="search-btn tap-effect" bindtap="doSearch">搜索</text>
+  </view>
+
+  <!-- 搜索结果区 -->
+  <scroll-view wx:if="{{showResults}}" class="result-scroll" scroll-y style="height: {{scrollHeight}}px;">
+    <view wx:if="{{results.length === 0}}" class="empty-tip">
+      <text class="empty-icon">🔍</text>
+      <text class="empty-text">没有找到"{{keyword}}"相关面料</text>
+      <text class="empty-sub">试试：云皱棉、莫代尔、罗纹</text>
+    </view>
+    <view wx:else class="result-list">
+      <view
+        class="result-card tap-effect"
+        wx:for="{{results}}"
+        wx:key="id"
+        bindtap="goDetail"
+        data-id="{{item.id}}"
+      >
+        <view class="rc-img-wrap">
+          <image wx:if="{{item.img}}" class="rc-img" src="{{item.img}}" mode="aspectFill" lazy-load />
+          <view wx:else class="rc-img rc-img-placeholder" style="background: {{item.bg}};"></view>
+        </view>
+        <view class="rc-info">
+          <text class="rc-name">{{item.name}}</text>
+          <text class="rc-spec">{{item.spec}}</text>
+          <text class="rc-desc">{{item.desc}}</text>
+          <view class="rc-colors">
+            <view class="rc-dot" wx:for="{{item.colors}}" wx:for-item="c" wx:key="*this" style="background:{{c}};"></view>
+            <text class="rc-color-count">{{item.colorCount}}色</text>
+          </view>
+        </view>
+        <text class="rc-arrow">›</text>
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- 默认区（搜索前显示） -->
+  <scroll-view wx:else class="default-scroll" scroll-y style="height: {{scrollHeight}}px;">
+
+    <!-- 最近搜索 -->
+    <view class="section">
+      <view class="section-header">
+        <text class="section-title">最近搜索</text>
+        <text class="clear-btn tap-effect" wx:if="{{searchHistory.length > 0}}" bindtap="clearHistory">🗑</text>
+      </view>
+      <text class="empty-history" wx:if="{{searchHistory.length === 0}}">暂无最近搜索记录</text>
+      <view wx:else class="tag-list">
+        <view
+          class="tag tap-effect"
+          wx:for="{{searchHistory}}"
+          wx:key="*this"
+          bindtap="tapTag"
+          data-word="{{item}}"
+        >{{item}}</view>
+      </view>
+    </view>
+
+    <!-- 热门搜索 -->
+    <view class="section">
+      <view class="section-header">
+        <text class="section-title">热门搜索</text>
+      </view>
+      <view class="tag-list">
+        <view
+          class="tag tap-effect"
+          wx:for="{{hotSearch}}"
+          wx:key="*this"
+          bindtap="tapTag"
+          data-word="{{item}}"
+        >{{item}}</view>
+      </view>
+    </view>
+
+    <!-- 最近浏览 -->
+    <view class="section" wx:if="{{recentViewed.length > 0}}">
+      <view class="section-header">
+        <text class="section-title">最近浏览</text>
+        <text class="clear-btn tap-effect" bindtap="clearRecent">清空</text>
+      </view>
+      <scroll-view class="recent-scroll" scroll-x enhanced show-scrollbar="{{false}}">
+        <view class="recent-list">
+          <view
+            class="recent-card tap-effect"
+            wx:for="{{recentViewed}}"
+            wx:key="id"
+            bindtap="goDetail"
+            data-id="{{item.id}}"
+          >
+            <view class="recent-img-wrap">
+              <image wx:if="{{item.img}}" class="recent-img" src="{{item.img}}" mode="aspectFill" lazy-load />
+              <view wx:else class="recent-img" style="background: {{item.bg}};"></view>
+            </view>
+            <text class="recent-name">{{item.name}}</text>
+            <text class="recent-spec">{{item.spec}}</text>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+
+  </scroll-view>
+
+</view>

@@ -1,0 +1,76 @@
+<!-- 面料分类页 -->
+<view class="page-category page-transition" style="{{pageAnimStyle}}">
+  <loading-mask id="lmask" />
+  <nav-bar bind:search="goSearch" />
+  <view style="height: {{navbarHeight}}px;"></view>
+
+
+  <!-- 横向分类标签 -->
+  <scroll-view class="cat-tabs" scroll-x enhanced show-scrollbar="{{false}}">
+    <view class="cat-tabs-inner">
+      <view
+        class="cat-tab {{activeCategory === item.id ? 'cat-tab-active' : ''}} tap-effect"
+        wx:for="{{categories}}"
+        wx:key="id"
+        bindtap="switchCategory"
+        data-id="{{item.id}}"
+      >
+        <text>{{item.name}}</text>
+        <text class="cat-tab-count">{{item.count}}</text>
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- 内容区 -->
+  <scroll-view class="content-scroll" scroll-y enhanced show-scrollbar="{{false}}">
+
+    <!-- 双列瀑布流 -->
+    <view class="grid-section">
+      <view class="grid-col grid-col-left">
+        <view
+          class="grid-card tap-effect {{animReady ? 'visible' : ''}}"
+          wx:for="{{leftColumn}}"
+          wx:key="id"
+          bindtap="goToDetail"
+          data-id="{{item.id}}"
+          style="transition-delay: {{index * 0.08}}s"
+        >
+          <image wx:if="{{item.img}}" class="grid-img" src="{{item.img}}" mode="aspectFill" style="background: {{item.bg}}; height: {{item.imgHeight}}rpx;" lazy-load />
+          <view wx:else class="grid-img" style="background: {{item.bg}}; height: {{item.imgHeight}}rpx;"></view>
+          <view class="grid-info">
+            <text class="grid-name">{{item.name}}</text>
+            <text class="grid-spec">{{item.spec}}</text>
+            <view class="grid-colors">
+              <view class="gc-dot" wx:for="{{item.colors}}" wx:for-item="c" wx:key="*this" style="background:{{c}}"></view>
+              <text class="gc-more" wx:if="{{item.colorCount > 4}}">+{{item.colorCount - 4}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="grid-col grid-col-right">
+        <view
+          class="grid-card tap-effect {{animReady ? 'visible' : ''}}"
+          wx:for="{{rightColumn}}"
+          wx:key="id"
+          bindtap="goToDetail"
+          data-id="{{item.id}}"
+          style="transition-delay: {{(index * 0.08) + 0.05}}s"
+        >
+          <image wx:if="{{item.img}}" class="grid-img" src="{{item.img}}" mode="aspectFill" style="background: {{item.bg}}; height: {{item.imgHeight}}rpx;" lazy-load />
+          <view wx:else class="grid-img" style="background: {{item.bg}}; height: {{item.imgHeight}}rpx;"></view>
+          <view class="grid-info">
+            <text class="grid-name">{{item.name}}</text>
+            <text class="grid-spec">{{item.spec}}</text>
+            <view class="grid-colors">
+              <view class="gc-dot" wx:for="{{item.colors}}" wx:for-item="c" wx:key="*this" style="background:{{c}}"></view>
+              <text class="gc-more" wx:if="{{item.colorCount > 4}}">+{{item.colorCount - 4}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </scroll-view>
+
+</view>

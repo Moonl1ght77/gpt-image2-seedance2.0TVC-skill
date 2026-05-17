@@ -1,0 +1,209 @@
+<!-- 首页 — 温馨家居风 -->
+<view class="page-index page-transition" style="{{pageAnimStyle}}">
+  <loading-mask id="lmask" />
+
+  <!-- 自定义导航栏组件 -->
+  <nav-bar transparent="{{navTransparent}}" bind:search="goSearch" />
+
+  <!-- 全屏视频 Hero -->
+  <view class="hero-fullscreen">
+    <video
+      class="hero-video"
+      src="{{heroVideoSrc}}"
+      autoplay
+      loop
+      muted
+      controls="{{false}}"
+      object-fit="cover"
+      show-play-btn="{{false}}"
+      show-center-play-btn="{{false}}"
+      enable-play-gesture="{{false}}"
+      id="heroVideo"
+      bindtimeupdate="onVideoTimeUpdate"
+    ></video>
+    <!-- 渐变遮罩（多层） -->
+    <view class="hero-overlay-top"></view>
+    <view class="hero-overlay-bottom"></view>
+    <!-- 四周暗角 -->
+    <view class="hero-vignette"></view>
+    <!-- 视频结尾品牌 Logo 动画 -->
+    <view class="hero-logo-overlay {{showLogoAnim ? 'logo-overlay-show' : ''}}">
+      <image
+        class="logo-img {{showLogoAnim ? 'logo-img-in' : ''}}"
+        src="/assets/logo-divider.png"
+        mode="aspectFit"
+      />
+    </view>
+  </view>
+
+  <!-- 品牌语录区（逐字交叉入场） -->
+  <view class="quote-section {{showQuote ? 'visible' : ''}}">
+    <view class="quote-mark">"</view>
+    <view class="quote-text font-serif">
+      <text
+        class="quote-char {{index % 2 === 0 ? 'from-left' : 'from-right'}} {{showQuote ? 'char-in' : ''}}"
+        wx:for="{{quoteChars}}"
+        wx:key="index"
+        style="animation-delay: {{index * 0.06 + 0.3}}s"
+      >{{item}}</text>
+    </view>
+    <view class="quote-line"></view>
+    <text class="quote-author {{showQuote ? 'author-in' : ''}}">— 乐顺科纺</text>
+  </view>
+
+  <!-- 品牌声明卡（Arc'teryx 风格：全幅图 + 居中 logo） -->
+  <view class="series-banner-section">
+    <view class="series-banner-card" bindtap="goToCategory">
+      <image class="series-banner-img" src="cloud://cloud1-d3gfhziqx2f5af184.636c-cloud1-d3gfhziqx2f5af184-1426822045/series-banner.png" mode="aspectFill" lazy-load />
+      <view class="series-banner-overlay"></view>
+      <!-- 左下角信息 -->
+      <view class="series-banner-info">
+        <text class="series-banner-name">面料系列</text>
+        <view class="series-banner-btn">
+          <text class="series-banner-btn-text">查看更多</text>
+          <text class="series-banner-arrow"> →</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 精选面料（大卡片纵向） -->
+  <view class="featured-section">
+    <view class="section-header-center anim-header {{showFeatured ? 'header-visible' : ''}}">
+      <text class="section-subtitle-top">FEATURED FABRICS</text>
+      <view class="title-line"></view>
+      <text class="section-title-lg">精选面料</text>
+    </view>
+
+    <view class="featured-vertical">
+      <view
+        class="featured-vcard tap-effect card {{index % 2 === 0 ? 'slide-left' : 'slide-right'}} {{featuredState === 'in' ? 'card-enter' : ''}} {{featuredState === 'out' ? 'card-exit' : ''}}"
+        wx:for="{{featuredList}}"
+        wx:key="id"
+        bindtap="goToDetail"
+        data-id="{{item.id}}"
+        style="animation-delay: {{index * 0.12}}s"
+      >
+        <image wx:if="{{item.img}}" class="fv-img" src="{{item.img}}" mode="aspectFill" lazy-load style="background: {{item.bg}}" />
+        <view wx:else class="fv-img" style="background: {{item.bg}}"></view>
+
+        <view class="fv-info">
+          <text class="fv-name">{{item.name}}</text>
+          <text class="fv-desc">{{item.desc}}</text>
+          <view class="fv-arrow">
+            <text>查看详情 →</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 装饰分隔 -->
+  <view class="deco-divider">
+    <view class="deco-line"></view>
+    <text class="deco-icon">◇</text>
+    <view class="deco-line"></view>
+  </view>
+
+  <!-- 面料工艺（横滑卡片） -->
+  <view class="craft-section {{showCraft ? 'visible' : ''}}">
+    <view class="section-header-center anim-header {{showCraft ? 'header-visible' : ''}}">
+      <text class="section-subtitle-top">CRAFTSMANSHIP</text>
+      <view class="title-line"></view>
+      <text class="section-title-lg">面料工艺</text>
+    </view>
+
+    <!-- 手动拖拽横滑 -->
+    <view class="craft-scroll"
+      bindtouchstart="onCraftDragStart"
+      bindtouchmove="onCraftDragMove"
+      bindtouchend="onCraftDragEnd">
+      <view class="craft-track {{craftNoAnim ? '' : 'craft-track-anim'}}" style="transform: translateX({{craftTrackPx}}px);">
+        <view class="craft-card" wx:for="{{craftList}}" wx:key="code">
+          <text class="craft-code">#{{item.code}}</text>
+          <text class="craft-name">{{item.name}}</text>
+          <view class="craft-divider"></view>
+          <view class="craft-row">
+            <text class="craft-label">成分</text>
+            <text class="craft-val">{{item.comp}}</text>
+          </view>
+          <view class="craft-row">
+            <text class="craft-label">克重</text>
+            <text class="craft-val">{{item.weight}}</text>
+          </view>
+          <view class="craft-row">
+            <text class="craft-label">工艺</text>
+            <text class="craft-val">{{item.craft}}</text>
+          </view>
+          <view class="craft-row">
+            <text class="craft-label">色号</text>
+            <text class="craft-val">{{item.colors}} 色</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 滚动进度指示条 -->
+    <view class="craft-progress-track">
+      <view class="craft-progress-thumb" style="left: {{craftScrollLeft}}%;"></view>
+    </view>
+  </view>
+
+  <!-- 面料墙 -->
+  <view class="fabric-wall-section {{showFabricWall ? 'visible' : ''}}">
+    <view class="section-header-center anim-header {{showFabricWall ? 'header-visible' : ''}}">
+      <text class="section-subtitle-top">FABRIC WALL</text>
+      <view class="title-line"></view>
+      <text class="section-title-lg">面料墙</text>
+    </view>
+    <scroll-view class="fw-scroll-wrapper" scroll-x="{{true}}" enhanced="{{true}}" show-scrollbar="{{false}}">
+      <view class="fw-row">
+      <!-- 宽大格 -->
+      <view class="fw-item fw-w340">
+        <image class="fw-img" src="{{fabricWallImgs[0]}}" mode="aspectFill" lazy-load />
+      </view>
+      <!-- 纵向双格 -->
+      <view class="fw-column-group fw-w200">
+        <view class="fw-item-half"><image class="fw-img" src="{{fabricWallImgs[1]}}" mode="aspectFill" lazy-load /></view>
+        <view class="fw-item-half"><image class="fw-img" src="{{fabricWallImgs[2]}}" mode="aspectFill" lazy-load /></view>
+      </view>
+      <!-- 宽大格 -->
+      <view class="fw-item fw-w340">
+        <image class="fw-img" src="{{fabricWallImgs[3]}}" mode="aspectFill" lazy-load />
+      </view>
+      <!-- 纵向双格 -->
+      <view class="fw-column-group fw-w200">
+        <view class="fw-item-half"><image class="fw-img" src="{{fabricWallImgs[4]}}" mode="aspectFill" lazy-load /></view>
+        <view class="fw-item-half"><image class="fw-img" src="{{fabricWallImgs[5]}}" mode="aspectFill" lazy-load /></view>
+      </view>
+      <!-- 纵向双格 -->
+      <view class="fw-column-group fw-w200">
+        <view class="fw-item-half"><image class="fw-img" src="{{fabricWallImgs[6]}}" mode="aspectFill" lazy-load /></view>
+        <view class="fw-item-half"><image class="fw-img" src="{{fabricWallImgs[7]}}" mode="aspectFill" lazy-load /></view>
+      </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 底部签名 -->
+  <view class="footer-signature">
+    <view class="footer-line"></view>
+    <text class="footer-brand">LESHUN TEXTILE · 乐顺科纺</text>
+    <text class="footer-sub">Since 2024 · 专注家居服面料</text>
+  </view>
+
+  <!-- 底部备案信息 -->
+  <view class="page-license-bar tap-effect" bindtap="openBusinessLicense">
+    <view class="license-text-row">
+      <text class="license-icon-text">营</text>
+      <text class="license-main">电子营业执照</text>
+      <text class="license-sep">｜</text>
+      <text class="license-corp">广州市乐顺科纺有限公司</text>
+    </view>
+    <image class="license-logo" src="/assets/logo-divider.png" mode="aspectFit" />
+  </view>
+
+  <!-- 底部留白 -->
+  <view style="height: 60rpx;"></view>
+
+</view>

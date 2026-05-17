@@ -1,0 +1,209 @@
+/* 联系我们 — 高级品牌风 */
+.page-contact {
+  overflow-x: hidden;
+  background: linear-gradient(to bottom, #4A4238 0%, #342E28 15%, #241E18 35%, #1A1612 55%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  padding-bottom: calc(180rpx + env(safe-area-inset-bottom));
+}
+
+/* ---- 头部 ---- */
+.contact-hero {
+  display: flex; flex-direction: column;
+  align-items: center; padding: 56rpx 40rpx 40rpx;
+}
+.hero-en {
+  font-size: 20rpx; color: #8A8078;
+  letter-spacing: 8rpx; font-weight: 300;
+}
+.hero-title {
+  font-size: 40rpx; font-weight: 700; color: #EDE8E2;
+  font-family: 'Songti SC', 'STSong', 'Noto Serif CJK SC', 'SimSun', serif;
+  letter-spacing: 6rpx; margin-top: 8rpx;
+}
+.hero-divider {
+  width: 48rpx; height: 2rpx;
+  background: rgba(255,255,255,0.15); margin: 24rpx 0;
+}
+.hero-desc {
+  font-size: 24rpx; color: #9A9088;
+  letter-spacing: 2rpx; text-align: center;
+}
+
+/* ---- 联系方式 — 大卡片按鈕 ---- */
+.contact-section { padding: 0 40rpx; }
+
+.contact-btn-card {
+  display: flex; align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #2E2820 0%, #241E18 100%);
+  border: 1rpx solid #3A3028;
+  border-radius: 16rpx;
+  padding: 32rpx 36rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 4rpx 24rpx rgba(0,0,0,0.3);
+}
+.contact-btn-wechat {
+  border-color: #2A3028;
+  background: linear-gradient(135deg, #202820 0%, #181E18 100%);
+}
+.contact-btn-left {
+  display: flex; flex-direction: column;
+}
+.contact-btn-label {
+  font-size: 22rpx; color: #8A8078;
+  letter-spacing: 2rpx; font-weight: 300;
+  margin-bottom: 8rpx;
+}
+.contact-btn-value {
+  font-size: 34rpx; color: #EDE8E2;
+  font-weight: 600; letter-spacing: 2rpx;
+}
+.contact-btn-tag {
+  background: #8B7355;
+  border-radius: 40rpx;
+  padding: 10rpx 24rpx;
+}
+.contact-btn-tag text {
+  font-size: 22rpx; color: #fff;
+  letter-spacing: 2rpx; font-weight: 500;
+}
+.contact-tag-wechat {
+  background: #4A7A55;
+}
+.contact-meta {
+  display: flex; flex-direction: column;
+  padding: 16rpx 4rpx 0;
+}
+.meta-text {
+  font-size: 22rpx; color: #6A6058;
+  letter-spacing: 1rpx; line-height: 1.8;
+}
+
+/* ---- 装饰分隔 ---- */
+.section-separator {
+  display: flex; align-items: center;
+  justify-content: center; padding: 24rpx 60rpx;
+}
+.sep-line {
+  flex: 1; height: 1rpx;
+  background: linear-gradient(90deg, transparent, #3A3028, transparent);
+}
+.sep-diamond {
+  font-size: 22rpx; color: #7A7068;
+  margin: 0 20rpx;
+}
+
+/* ---- 询价区 ---- */
+.inquiry-section { padding: 32rpx 40rpx; }
+.section-en {
+  font-size: 20rpx; color: #8A8078;
+  letter-spacing: 6rpx; font-weight: 300; display: block;
+}
+.section-title {
+  font-size: 36rpx; font-weight: 700; color: #EDE8E2;
+  letter-spacing: 4rpx; margin-top: 8rpx; display: block;
+  font-family: 'Songti SC', 'STSong', 'Noto Serif CJK SC', 'SimSun', serif;
+}
+.section-hint {
+  font-size: 24rpx; color: #9A9088;
+  margin-top: 8rpx; display: block;
+}
+
+.inquiry-form { margin-top: 32rpx; }
+.form-group { margin-bottom: 28rpx; }
+.form-label {
+  font-size: 24rpx; color: #A09888;
+  font-weight: 500; letter-spacing: 2rpx;
+  margin-bottom: 12rpx; display: block;
+}
+.form-input {
+  width: 100%; height: 88rpx;
+  background: #241F1A;
+  border: 1rpx solid #2E2822;
+  border-radius: 8rpx;
+  padding: 0 28rpx;
+  font-size: 28rpx; color: #EDE8E2;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+.form-input:focus { border-color: #8B7355; }
+.form-textarea {
+  width: 100%; height: 180rpx;
+  background: #241F1A;
+  border: 1rpx solid #2E2822;
+  border-radius: 8rpx;
+  padding: 20rpx 28rpx;
+  font-size: 28rpx; color: #EDE8E2;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+.form-textarea:focus { border-color: #8B7355; }
+.form-placeholder { color: #5A5048; }
+
+.form-submit {
+  margin-top: 40rpx; height: 100rpx;
+  background: linear-gradient(135deg, #A08560 0%, #8B7355 50%, #7A6245 100%);
+  border-radius: 12rpx;
+  display: flex; align-items: center;
+  justify-content: center;
+  box-shadow: 0 8rpx 32rpx rgba(139,115,85,0.35);
+}
+.submit-text {
+  color: #FFFFFF; font-size: 30rpx;
+  font-weight: 600; letter-spacing: 4rpx;
+}
+
+/* ---- 信任标签 ---- */
+.trust-badges {
+  display: flex; flex-direction: row;
+  gap: 16rpx; margin-top: 20rpx;
+}
+.trust-badge {
+  font-size: 22rpx; color: #A89878;
+  border: 1rpx solid #3A3028;
+  border-radius: 40rpx;
+  padding: 8rpx 24rpx;
+  letter-spacing: 2rpx;
+  background: rgba(139,115,85,0.08);
+}
+
+/* ---- 底部签名 ---- */
+.contact-footer {
+  display: flex; flex-direction: column;
+  align-items: center; padding: 48rpx 40rpx 32rpx;
+}
+.footer-line {
+  width: 40rpx; height: 2rpx; background: #3A3028;
+  margin-bottom: 20rpx;
+}
+.footer-brand {
+  font-size: 20rpx; color: #8A8078;
+  letter-spacing: 8rpx; font-weight: 300;
+}
+.footer-note {
+  font-size: 24rpx; color: #7A7068;
+  margin-top: 8rpx; letter-spacing: 4rpx;
+}
+
+/* ---- 底部到 tabBar 过渡渐变 ---- */
+/* ---- 商家通知设置按钮（低调隐藏式） ---- */
+.merchant-notify-btn {
+  display: flex;
+  justify-content: center;
+  padding: 24rpx 0 8rpx;
+}
+
+.merchant-notify-text {
+  font-size: 18rpx;
+  color: rgba(255,255,255,0.12);
+  letter-spacing: 2rpx;
+}
+
+.page-contact::after {
+  content: '';
+  display: block;
+  height: 120rpx;
+  background: linear-gradient(to bottom, transparent, rgba(26,22,18,0.6));
+  margin-top: -32rpx;
+}

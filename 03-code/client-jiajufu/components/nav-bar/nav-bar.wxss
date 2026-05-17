@@ -1,0 +1,100 @@
+/* 导航栏容器 */
+.nav-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-transparent {
+  background: transparent;
+  border-bottom: 1rpx solid transparent;
+}
+
+.nav-solid {
+  background: rgba(247, 243, 239, 0.96);
+  backdrop-filter: saturate(180%) blur(40rpx);
+  -webkit-backdrop-filter: saturate(180%) blur(40rpx);
+  border-bottom: 1rpx solid rgba(0, 0, 0, 0.06);
+}
+
+/* 内容行 */
+.nav-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 28rpx;
+  box-sizing: border-box;
+}
+
+/* 左按钮区 */
+.nav-left {
+  position: relative;
+  width: 56rpx;
+  height: 56rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* 搜索圆圈 */
+.search-lens {
+  width: 28rpx;
+  height: 28rpx;
+  border-radius: 50%;
+  border-width: 3.5rpx;
+  border-style: solid;
+}
+
+.icon-light {
+  border-color: rgba(255, 255, 255, 0.92);
+}
+
+.icon-dark {
+  border-color: rgba(30, 30, 30, 0.75);
+}
+
+/* 搜索柄 */
+.search-stick {
+  position: absolute;
+  bottom: 8rpx;
+  right: 5rpx;
+  width: 13rpx;
+  height: 3.5rpx;
+  border-radius: 4rpx;
+  transform: rotate(-45deg);
+}
+
+.stick-light {
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.stick-dark {
+  background: rgba(30, 30, 30, 0.75);
+}
+
+/* 返回箭头 */
+.back-icon {
+  width: 18rpx;
+  height: 18rpx;
+  border-left-width: 3rpx;
+  border-bottom-width: 3rpx;
+  border-style: solid;
+  transform: rotate(45deg) translateX(4rpx);
+}
+
+/* 中间品牌 Logo */
+.nav-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220rpx;
+  height: 72rpx;
+}

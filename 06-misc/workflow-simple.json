@@ -1,0 +1,124 @@
+{
+  "16": {
+    "inputs": {
+      "preview_markdown": "",
+      "preview_text": "",
+      "previewMode": null,
+      "source": [
+        "19",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "预览任意"
+    }
+  },
+  "17": {
+    "inputs": {
+      "direction": "图生图",
+      "mode": "默认",
+      "quality": "auto",
+      "resolution": "1K",
+      "aspect_ratio": "1:1",
+      "count": 1,
+      "seed": 1674790164,
+      "prompt": "",
+      "prompts_list": [
+        "19",
+        0
+      ],
+      "image1": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "SynVowGptImage2",
+    "_meta": {
+      "title": "SynVow GPT-Image-2"
+    }
+  },
+  "18": {
+    "inputs": {
+      "megapixels": 1,
+      "multiple_of": 16,
+      "resize_mode": "stretch",
+      "upscale_method": "area",
+      "resolution": "",
+      "image": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixelsX",
+    "_meta": {
+      "title": "Scale Image to Total Pixels Adv"
+    }
+  },
+  "19": {
+    "inputs": {
+      "separator": "",
+      "text1": [
+        "23",
+        0
+      ],
+      "text2": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "CR Text Concatenate",
+    "_meta": {
+      "title": "🔤 CR Text Concatenate"
+    }
+  },
+  "20": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "17",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "21": {
+    "inputs": {
+      "image": "微信图片_20260430180714_567_8.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "22": {
+    "inputs": {
+      "model": "wd-v1-4-moat-tagger-v2",
+      "threshold": 0.6,
+      "character_threshold": 1,
+      "replace_underscore": true,
+      "trailing_comma": true,
+      "exclude_tags": "comic, greyscale, monochrome, text, letter, signature, watermark, page number, text focus, book, magazine, editorial, framework, border",
+      "image": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "WD14Tagger|pysssss",
+    "_meta": {
+      "title": "WD14 Tagger 🐍"
+    }
+  },
+  "23": {
+    "inputs": {
+      "prompt": "(NO TEXT, NO LETTERS, NO NUMBERS, ABSOLUTELY NO HUMANS, NO MODELS, NO SKIN), act as a high-end luxury textile art director.\n[Reference Strategy]: Use image1 for global color guidance and image2 as the \"Microscopic Truth\" to replicate the exact physical structure of the knit loops.\n[Material Analysis]: The fabric is a delicate, pure white fine-gauge knit. Its core identity consists of rhythmic vertical stripes: columns of small, subtle heart-shaped pointelle motifs alternating with intricate braided cable-knit patterns.\n[Composition Design]: Based on the fabric's soft drape, design an elegant studio composition: arrange the material into deep, cascading S-curves and soft diagonal folds that mimic the appearance of a serene, rolling snow-covered landscape.\n[Bright & Airy Lighting]: Apply a high-key, luminous lighting setup. Use diffused professional light to make the white yarn glow with a fresh, pearlescent energy. Eliminate all harsh shadows; replace them with gentle micro-shadows that define the depth of the braids while maintaining a bright, exceptionally comfortable visual feel.\n[Micro-Realism]: Avoid a \"perfect\" digital render look. Referring to the high-resolution crop in image2, replicate the organic \"imperfections\": include individual loose fiber fuzz (毛羽), realistic yarn tension, and the intricate, slightly irregular interlocking of the threads.\n[Output Goal]: The final result must be an extreme macro close-up that is high-fidelity, sophisticated, and radiates a premium tactile soul."
+    },
+    "class_type": "CR Prompt Text",
+    "_meta": {
+      "title": "⚙️ CR Prompt Text"
+    }
+  }
+}

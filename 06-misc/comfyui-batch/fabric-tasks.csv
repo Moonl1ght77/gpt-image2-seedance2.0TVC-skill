@@ -1,0 +1,51 @@
+fabric_id,fabric_name,color_number,color_name_cn,color_desc_en,hex,workflow,sam_prompt,gen_count,input_image
+3092,云皱棉,01,本白,"warm ivory white, like unbleached natural cotton with a faint cream warmth",#FFFFF0,simple,,1,3092-detail.jpg
+3092,云皱棉,02,浅粉,"soft blush pink, a delicate muted pink with warm undertone",#FFF0F0,simple,,1,3092-detail.jpg
+3092,云皱棉,03,浅杏,"pale apricot, a warm peachy-beige like sun-kissed skin",#FAEBD7,simple,,1,3092-detail.jpg
+3092,云皱棉,04,浅米,"light cream beige, warm and soft like vanilla custard",#FFF8DC,simple,,1,3092-detail.jpg
+3092,云皱棉,05,焦糖,"rich caramel tan, warm golden-brown like toasted sugar",#DEB887,simple,,1,3092-detail.jpg
+3092,云皱棉,06,驼色,"classic camel, a warm sandy brown with golden undertone",#C4A882,simple,,1,3092-detail.jpg
+3092,云皱棉,07,土黄,"earthy ochre yellow, muted warm gold like aged parchment",#C8B060,simple,,1,3092-detail.jpg
+3092,云皱棉,08,铜棕,"copper bronze brown, deep warm reddish-brown like aged copper",#B87040,simple,,1,3092-detail.jpg
+3092,云皱棉,09,军绿,"olive army green, deep muted green with warm brown undertone",#5A5A3A,simple,,1,3092-detail.jpg
+3100,菱朵棉,01,本白,"warm ivory white, like unbleached natural cotton",#FFFFF0,simple,,2,3100-detail.jpg
+3100,菱朵棉,02,浅粉,"soft blush pink, delicate muted pink with warm undertone",#FFF0F0,simple,,2,3100-detail.jpg
+3100,菱朵棉,03,浅黄,"pale lemon chiffon yellow, soft and airy like morning light",#FFFACD,simple,,2,3100-detail.jpg
+3100,菱朵棉,04,浅米,"light cream beige, warm and soft like vanilla custard",#FFF8DC,simple,,2,3100-detail.jpg
+3100,菱朵棉,05,浅粉紫,"pale mauve lavender, a soft pink-purple like faded wisteria",#E8D0E0,simple,,2,3100-detail.jpg
+3100,菱朵棉,06,浅绿,"soft sage green, muted and calming like spring leaves",#D8E8D0,simple,,2,3100-detail.jpg
+3100,菱朵棉,07,浅灰粉,"dusty rose gray, warm muted pink blended with soft gray",#E8D8D8,simple,,2,3100-detail.jpg
+6049,蝴蝶园林,01,本白,"warm off-white, like fresh cotton with a hint of cream",#FFF8F5,complex,butterfly pattern,5,6049-detail.jpg
+6049,蝴蝶园林,02,浅粉,"blush peach pink, warm and delicate like rose petals",#FFE8E0,complex,butterfly pattern,5,6049-detail.jpg
+6049,蝴蝶园林,03,浅蓝,"powder blue, soft and cool like a clear morning sky",#D8E0F0,complex,butterfly pattern,5,6049-detail.jpg
+6049,蝴蝶园林,04,浅绿,"muted sage green, gentle and organic like eucalyptus leaves",#E0E8D8,complex,butterfly pattern,5,6049-detail.jpg
+6049,蝴蝶园林,05,浅紫,"soft lavender, a gentle cool purple like dried lavender sprigs",#D8D0E8,complex,butterfly pattern,5,6049-detail.jpg
+6467,幸运叶语,01,本白,color extracted from swatch image3,#FFF8F5,complex,leaf pattern,1,6467-detail.jpg
+6467,幸运叶语,02,浅粉紫,color extracted from swatch image3,#EDD8E0,complex,leaf pattern,1,6467-detail.jpg
+6467,幸运叶语,03,浅粉,color extracted from swatch image3,#FFE0E0,complex,leaf pattern,1,6467-detail.jpg
+6467,幸运叶语,04,浅蓝灰,color extracted from swatch image3,#D0D8E0,complex,leaf pattern,1,6467-detail.jpg
+6467,幸运叶语,05,浅黄,color extracted from swatch image3,#FFF5CC,complex,leaf pattern,1,6467-detail.jpg
+6467,幸运叶语,06,浅豆绿,color extracted from swatch image3,#C8D8C0,complex,leaf pattern,1,6467-detail.jpg
+6467,幸运叶语,07,冰蓝,color extracted from swatch image3,#C8D8E8,complex,leaf pattern,1,6467-detail.jpg
+6467,幸运叶语,08,薄荷蓝绿,color extracted from swatch image3,#7BBCBE,complex,leaf pattern,1,6467-detail.jpg
+6467,幸运叶语,09,米白,color extracted from swatch image3,#F5F0EC,complex,leaf pattern,1,6467-detail.jpg
+8416,兰精莫代尔,01,本白,"warm off-white with subtle silky sheen, like fresh modal fiber",#F5F0F0,simple,,1,8416-detail.jpg
+8416,兰精莫代尔,02,浅粉,"soft blush pink with modal sheen, delicate and warm",#FFD8E0,simple,,1,8416-detail.jpg
+8416,兰精莫代尔,03,浅紫粉,"pale mauve pink, a soft purple-pink with silky quality",#E0C8D8,simple,,1,8416-detail.jpg
+8416,兰精莫代尔,04,浅米,"warm cream beige with subtle modal luster",#F0E8D0,simple,,1,8416-detail.jpg
+8416,兰精莫代尔,05,浅绿,"soft celadon green, muted and elegant with silky sheen",#D0E0C8,simple,,1,8416-detail.jpg
+8416,兰精莫代尔,06,浅黄绿,"pale chartreuse, soft yellow-green like new spring growth",#E0E8C8,simple,,1,8416-detail.jpg
+8416,兰精莫代尔,07,浅蓝,"powder blue with modal's characteristic soft sheen",#D0D8E0,simple,,1,8416-detail.jpg
+8416,兰精莫代尔,08,灰蓝,"slate blue-gray, sophisticated and cool",#A8B8C8,simple,,1,8416-detail.jpg
+8416,兰精莫代尔,09,灰色,"medium gray, clean and neutral with subtle luster",#B0B0B0,simple,,1,8416-detail.jpg
+8416,兰精莫代尔,10,卡其,"warm khaki, a sandy olive-beige",#C0B8A0,simple,,1,8416-detail.jpg
+8416,兰精莫代尔,11,深灰,"charcoal gray, deep and rich with silky modal sheen",#808080,simple,,1,8416-detail.jpg
+8416,兰精莫代尔,12,花灰,"heather gray, a marled medium gray with tonal variation",#A0A0A0,simple,,1,8416-detail.jpg
+8416,兰精莫代尔,13,暗红,"deep burgundy red, rich and intense like aged wine",#8B2020,simple,,1,8416-detail.jpg
+8416,兰精莫代尔,14,军绿,"dark olive green, deep and earthy with warm undertone",#5A6840,simple,,1,8416-detail.jpg
+8416,兰精莫代尔,15,深蓝,"deep navy blue, rich and sophisticated",#2F4F6F,simple,,1,8416-detail.jpg
+8416,兰精莫代尔,16,酒红,"dark wine red, deep and luxurious like Bordeaux",#6B1020,simple,,1,8416-detail.jpg
+8416,兰精莫代尔,17,墨绿,"dark forest green, deep and mysterious",#3A5040,simple,,1,8416-detail.jpg
+8416,兰精莫代尔,18,深咖,"dark espresso brown, rich and warm",#4A3A2A,simple,,1,8416-detail.jpg
+8416,兰精莫代尔,19,藏蓝,"deep indigo navy, dark and authoritative",#1A2A4A,simple,,1,8416-detail.jpg
+8416,兰精莫代尔,20,黑色,"true black, deep and absolute with subtle modal sheen",#1A1A1A,simple,,1,8416-detail.jpg

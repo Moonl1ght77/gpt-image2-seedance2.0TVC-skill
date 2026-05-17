@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "pages/splash/splash",
+    "pages/index/index",
+    "pages/category/category",
+    "pages/detail/detail",
+    "pages/swatch/swatch",
+    "pages/about/about",
+    "pages/contact/contact",
+    "pages/license/license",
+    "pages/search/search",
+    "pages/cloudcheck/cloudcheck"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#F5F0EB",
+    "navigationBarTitleText": "织暖家居",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#F5F0EB",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#999999",
+    "selectedColor": "#8B7355",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/icons/home.png",
+        "selectedIconPath": "assets/icons/home-active.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "面料",
+        "iconPath": "assets/icons/fabric.png",
+        "selectedIconPath": "assets/icons/fabric-active.png"
+      },
+      {
+        "pagePath": "pages/swatch/swatch",
+        "text": "色卡",
+        "iconPath": "assets/icons/swatch.png",
+        "selectedIconPath": "assets/icons/swatch-active.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "assets/icons/about.png",
+        "selectedIconPath": "assets/icons/about-active.png"
+      },
+      {
+        "pagePath": "pages/contact/contact",
+        "text": "联系",
+        "iconPath": "assets/icons/contact.png",
+        "selectedIconPath": "assets/icons/contact-active.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "loading-mask": "/components/loading-mask/loading-mask"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

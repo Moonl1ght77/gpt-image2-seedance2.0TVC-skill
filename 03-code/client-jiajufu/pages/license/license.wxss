@@ -1,0 +1,89 @@
+/* 电子营业执照页 */
+.page-license {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #F7F3EF 0%, #F0EAE3 40%, #E6DED5 75%, #DDD4CA 100%);
+}
+
+/* ---- 导航栏 ---- */
+.license-navbar {
+  background: rgba(247, 243, 239, 0.95);
+  backdrop-filter: saturate(180%) blur(20rpx);
+  -webkit-backdrop-filter: saturate(180%) blur(20rpx);
+  border-bottom: 1rpx solid rgba(139,115,85,0.15);
+}
+
+.navbar-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 88rpx;
+  padding: 0 32rpx;
+}
+
+.navbar-back {
+  display: flex;
+  align-items: center;
+  gap: 4rpx;
+  min-width: 120rpx;
+}
+
+.back-arrow {
+  font-size: 48rpx;
+  color: #8B7355;
+  line-height: 1;
+  margin-top: -4rpx;
+}
+
+.back-text {
+  font-size: 28rpx;
+  color: #8B7355;
+  letter-spacing: 1rpx;
+}
+
+.navbar-title {
+  font-size: 30rpx;
+  color: #3A3028;
+  font-weight: 600;
+  letter-spacing: 2rpx;
+}
+
+.navbar-placeholder {
+  min-width: 120rpx;
+}
+
+/* ---- 执照图片区 ---- */
+.license-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48rpx 32rpx;
+}
+
+.license-image-wrap {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 16rpx;
+  box-shadow: 0 16rpx 60rpx rgba(0,0,0,0.18);
+}
+
+.license-image {
+  width: 100%;
+  display: block;
+  margin-top: -60rpx;
+  margin-bottom: -60rpx;
+}
+
+.license-loading,
+.license-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120rpx 0;
+}
+
+.loading-text,
+.error-text {
+  font-size: 26rpx;
+  color: #A09080;
+  letter-spacing: 2rpx;
+}

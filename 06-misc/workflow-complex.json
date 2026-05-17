@@ -1,0 +1,227 @@
+{
+  "57": {
+    "inputs": {
+      "preview_markdown": "",
+      "preview_text": "",
+      "previewMode": null,
+      "source": [
+        "64",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "预览任意"
+    }
+  },
+  "58": {
+    "inputs": {
+      "direction": "图生图",
+      "mode": "默认",
+      "quality": "auto",
+      "resolution": "1K",
+      "aspect_ratio": "1:1",
+      "count": 1,
+      "seed": 175459377,
+      "prompt": "",
+      "prompts_list": [
+        "64",
+        0
+      ],
+      "image1": [
+        "59",
+        0
+      ]
+    },
+    "class_type": "SynVowGptImage2",
+    "_meta": {
+      "title": "SynVow GPT-Image-2"
+    }
+  },
+  "59": {
+    "inputs": {
+      "megapixels": 1,
+      "multiple_of": 16,
+      "resize_mode": "stretch",
+      "upscale_method": "area",
+      "resolution": "",
+      "image": [
+        "62",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixelsX",
+    "_meta": {
+      "title": "Scale Image to Total Pixels Adv"
+    }
+  },
+  "60": {
+    "inputs": {
+      "model": "wd-v1-4-moat-tagger-v2",
+      "threshold": 0.6,
+      "character_threshold": 1,
+      "replace_underscore": true,
+      "trailing_comma": true,
+      "exclude_tags": "comic, greyscale, monochrome, text, letter, signature, watermark, page number, text focus, book, magazine, editorial, framework, border，1girl, solo, human, person, model, face, woman, lady, girl",
+      "image": [
+        "59",
+        0
+      ]
+    },
+    "class_type": "WD14Tagger|pysssss",
+    "_meta": {
+      "title": "WD14 Tagger 🐍"
+    }
+  },
+  "61": {
+    "inputs": {
+      "prompt": "(NO TEXT, NO LETTERS, NO NUMBERS, ABSOLUTELY NO HUMANS, NO MODELS, NO SKIN), act as a luxury textile cinematographer for a high-end botanical editorial.\n[Color & Tone]: Use the \"Fresh Mint Green\" from the reference images. The tone should be bright, high-key, and radiate a clean, cooling energy.\n[Texture-Driven Composition]: The material has a rhythmic vertical ribbing. Arrange the fabric in a \"Dynamic Geometric Flow\": tilt the grain so the ribs run diagonally at 45 degrees. Create crisp but soft-edged architectural folds that allow the vertical lines to intersect and layer, creating a sense of sophisticated depth.\n[Wraparound Soft Lighting]: REPLACE harsh directional light with \"Luminous Volumetric Diffusion.\" Imagine light passing through a fine mist. There should be NO sharp, dark shadows. All shadows within the ribbed grooves must be soft, hazy, and pale, gently defining the texture without any \"bite\" or aggressive contrast.\n[Tactile Realism]: Avoid a digital CGI look. Ensure the fabric has a \"Velvety Matte\" soul. Every single vertical ridge should show the soft tactile haze of fine cotton fibers (毛羽), giving it a gentle, fuzzy halo that makes it look exceptionally comfortable and premium.\n[Final Goal]: A serene, high-fidelity macro close-up that is bright, airy, and feels 100% like a real, professional photograph designed for visual comfort."
+    },
+    "class_type": "CR Prompt Text",
+    "_meta": {
+      "title": "⚙️ CR Prompt Text"
+    }
+  },
+  "62": {
+    "inputs": {
+      "image": "ComfyUI_00012_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "63": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "58",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "64": {
+    "inputs": {
+      "separator": "",
+      "text1": [
+        "61",
+        0
+      ],
+      "text2": [
+        "60",
+        0
+      ]
+    },
+    "class_type": "CR Text Concatenate",
+    "_meta": {
+      "title": "🔤 CR Text Concatenate"
+    }
+  },
+  "82": {
+    "inputs": {
+      "model_name": "GroundingDINO_SwinT_OGC (694MB)"
+    },
+    "class_type": "GroundingDinoModelLoader (segment anything)",
+    "_meta": {
+      "title": "GroundingDinoModelLoader (segment anything)"
+    }
+  },
+  "83": {
+    "inputs": {
+      "prompt": "heart pattern",
+      "threshold": 0.15,
+      "sam_model": [
+        "93",
+        0
+      ],
+      "grounding_dino_model": [
+        "82",
+        0
+      ],
+      "image": [
+        "62",
+        0
+      ]
+    },
+    "class_type": "GroundingDinoSAMSegment (segment anything)",
+    "_meta": {
+      "title": "GroundingDinoSAMSegment (segment anything)"
+    }
+  },
+  "87": {
+    "inputs": {
+      "padding": 300,
+      "blur": 0
+    },
+    "class_type": "MaskBoundingBox+",
+    "_meta": {
+      "title": "🔧 Mask Bounding Box"
+    }
+  },
+  "88": {
+    "inputs": {
+      "width": [
+        "87",
+        4
+      ],
+      "height": [
+        "87",
+        5
+      ],
+      "position": "top-left",
+      "x_offset": [
+        "87",
+        2
+      ],
+      "y_offset": [
+        "87",
+        3
+      ],
+      "image": [
+        "62",
+        0
+      ]
+    },
+    "class_type": "ImageCrop+",
+    "_meta": {
+      "title": "🔧 图片裁剪"
+    }
+  },
+  "90": {
+    "inputs": {
+      "images": [
+        "88",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "91": {
+    "inputs": {
+      "images": [
+        "83",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "93": {
+    "inputs": {
+      "model_name": "sam_vit_h (2.56GB)"
+    },
+    "class_type": "SAMModelLoader (segment anything)",
+    "_meta": {
+      "title": "SAMModelLoader (segment anything)"
+    }
+  }
+}

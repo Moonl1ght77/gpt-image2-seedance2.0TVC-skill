@@ -1,0 +1,229 @@
+{
+  "main": {
+    "id": "da9295e1891a9708",
+    "type": "split",
+    "children": [
+      {
+        "id": "0b6a556408defdc7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "62bb703be9ff9fc6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "progress.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "progress"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0dd0203ad68b3bc7",
+    "type": "split",
+    "children": [
+      {
+        "id": "147b6067158e6994",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3a38c23b53653077",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "dc81cadd75823073",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "7f92a500fddc507e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d1bbcde19e76eee2",
+    "type": "split",
+    "children": [
+      {
+        "id": "4043b54f47a3cb8f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "87cece272017ae62",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "学习笔记.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "学习笔记 的反向链接列表"
+            }
+          },
+          {
+            "id": "2d0ca31901a5b46d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "学习笔记.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "学习笔记 的出链列表"
+            }
+          },
+          {
+            "id": "9120ae4f78dc6660",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "19df21562a2bd9a8",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "db247f3365ee71c3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "学习笔记.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "学习笔记 的大纲"
+            }
+          },
+          {
+            "id": "4f143e3e36665d3c",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "62bb703be9ff9fc6",
+  "lastOpenFiles": [
+    "04-经验沉淀/工作报表-20260514.md",
+    "04-经验沉淀/SOP-20260514-搜索页与询价通知.md",
+    "04-经验沉淀/项目复盘模板.md",
+    "04-经验沉淀/学习笔记.md",
+    "04-经验沉淀/SOP-20260512-视频Hero与详情页重构.md",
+    "04-经验沉淀/SOP-20260513-联系页转化优化与启动动画.md",
+    "01-业务管理/商家汇报报表-20260514.md",
+    "01-业务管理/TVC拍摄需求问卷-20260514.md",
+    "04-经验沉淀/工作报表-20260513.md",
+    "04-经验沉淀/开发日志.md",
+    "04-经验沉淀/踩坑记录.md",
+    "03-技术文档/项目初始化与核心目录结构SOP.md",
+    "03-技术文档/SOP-图片包体积优化-云存储迁移.md",
+    "04-经验沉淀/工作报表-20260512.md",
+    "progress.md",
+    "04-经验沉淀/工作报表-20260428.md",
+    "04-经验沉淀/工作报表-20260506.md",
+    "01-业务管理/项目流程标准.md",
+    "01-业务管理/客户信息收集模板.md",
+    "03-技术文档/技术栈选型.md",
+    "03-技术文档/数据库设计.md",
+    "03-技术文档/SOP-自定义导航栏-滚动透明效果.md",
+    "03-技术文档/页面交互流程.md",
+    "02-客户档案/客户-家居服面料.md",
+    "03-技术文档/API 文档.md",
+    "01-业务管理/进度追踪.md",
+    "04-经验沉淀",
+    "03-技术文档",
+    "02-客户档案"
+  ]
+}

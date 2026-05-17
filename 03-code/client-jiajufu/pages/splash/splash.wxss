@@ -1,0 +1,49 @@
+.splash-page {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, #F7F3EF 0%, #EDE6DC 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.splash-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24rpx;
+  opacity: 0;
+}
+
+/* 渐入 */
+.anim-in {
+  animation: splashIn 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* 渐出 */
+.anim-out {
+  animation: splashOut 0.5s ease-in forwards;
+}
+
+@keyframes splashIn {
+  0%   { opacity: 0; transform: scale(0.88) translateY(16rpx); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes splashOut {
+  0%   { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.06); }
+}
+
+.splash-logo {
+  width: 400rpx;
+  height: 108rpx;
+  mix-blend-mode: multiply;
+}
+
+.splash-sub {
+  font-size: 22rpx;
+  color: #A89878;
+  letter-spacing: 6rpx;
+  font-weight: 300;
+}

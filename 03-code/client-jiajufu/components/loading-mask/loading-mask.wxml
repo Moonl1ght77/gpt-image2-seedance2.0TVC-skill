@@ -1,0 +1,3 @@
+<view class="lm-overlay {{visible ? 'lm-show' : 'lm-hide'}}">
+  <image class="lm-logo {{visible ? 'lm-logo-in' : ''}}" src="/assets/logo-divider.png" mode="aspectFit" />
+</view>

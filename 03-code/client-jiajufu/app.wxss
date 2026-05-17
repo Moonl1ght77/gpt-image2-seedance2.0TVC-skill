@@ -1,0 +1,220 @@
+/* ============================================
+   全局样式 — LESHUN 黑白高级风
+   主色：#F7F7F4（纸感浅底）
+   辅助色：#000000（纯黑）
+   点缀色：#111111（深黑）
+   文字色：#111111（近黑）
+   次要文字：#999999
+   ============================================ */
+
+page {
+  overflow-x: hidden;
+  --color-primary: #F7F7F4;
+  --color-secondary: #000000;
+  --color-accent: #111111;
+  --color-text: #111111;
+  --color-text-light: #7A7A7A;
+  --color-bg: #F7F7F4;
+  --color-card: #FFFFFF;
+  --color-warm: #000000;
+  --color-border: #E1E1DE;
+  --shadow-card: 0 4rpx 20rpx rgba(0, 0, 0, 0.06);
+  --shadow-float: 0 8rpx 32rpx rgba(0, 0, 0, 0.12);
+  --radius-sm: 12rpx;
+  --radius-md: 20rpx;
+  --radius-lg: 32rpx;
+  /* 字体系统 — 对齐乐顺品牌几何无衬线风格 */
+  --font-cn: 'PingFang SC', 'Noto Sans SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  --font-body: var(--font-cn);
+  --font-display-cn: var(--font-cn);
+  --font-title-cn: var(--font-cn);
+  --font-brand-en: 'Arial Black', 'DIN Alternate', 'Avenir Next Condensed', 'Helvetica Neue', Arial, sans-serif;
+  /* 字重层级 */
+  --fw-display: 700;   /* 大展示标题 */
+  --fw-title: 600;     /* 章节标题 */
+  --fw-body: 400;      /* 正文 */
+  --fw-light: 300;     /* 辅助说明 */
+  /* 字间距层级 */
+  --ls-display: 8rpx;  /* 大标题 */
+  --ls-title: 4rpx;   /* 章节标题 */
+  --ls-body: 1rpx;    /* 正文 */
+  --ls-caption: 0rpx; /* 小字 */
+
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 28rpx;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- 字体工具类 — 统一乐顺品牌无衬线风格 ---- */
+
+/* 展示级：Hero标题、Banner大字 */
+.font-display {
+  font-family: var(--font-cn);
+  font-weight: var(--fw-display);
+  letter-spacing: var(--ls-display);
+  line-height: 1.15;
+}
+
+/* 章节标题：section-title、卡片标题 */
+.font-title {
+  font-family: var(--font-cn);
+  font-weight: var(--fw-title);
+  letter-spacing: var(--ls-title);
+  line-height: 1.4;
+}
+
+/* 正文：描述、详情文字 */
+.font-body {
+  font-family: var(--font-cn);
+  font-weight: var(--fw-body);
+  letter-spacing: var(--ls-body);
+  line-height: 1.7;
+}
+
+/* 辅助说明：标签、小提示 */
+.font-caption {
+  font-family: var(--font-cn);
+  font-weight: var(--fw-light);
+  letter-spacing: var(--ls-caption);
+  line-height: 1.5;
+}
+
+/* 兼容旧类名（避免已有代码报错） */
+.font-serif {
+  font-family: var(--font-cn);
+  font-weight: var(--fw-body);
+  letter-spacing: var(--ls-body);
+}
+
+.font-brand-en {
+  font-family: var(--font-brand-en);
+  font-weight: 900;
+  letter-spacing: 6rpx;
+  text-transform: uppercase;
+}
+
+.font-brand-cn {
+  font-family: var(--font-cn);
+  font-weight: var(--fw-display);
+  letter-spacing: var(--ls-display);
+}
+
+/* 页面切换淡入过渡 */
+.page-transition {
+  animation: pageFadeIn 0.4s ease-out;
+}
+@keyframes pageFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* 淡入动画 */
+.fade-in {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.fade-in-delay-1 { animation-delay: 0.1s; }
+.fade-in-delay-2 { animation-delay: 0.2s; }
+.fade-in-delay-3 { animation-delay: 0.3s; }
+.fade-in-delay-4 { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40rpx);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 缩放弹性动画 */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.scale-in {
+  animation: scaleIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+/* 点击反馈 */
+.tap-effect {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.tap-effect:active {
+  transform: scale(0.97);
+  box-shadow: 0 2rpx 8rpx rgba(139, 115, 85, 0.05);
+}
+
+/* 通用卡片 */
+.card {
+  background: var(--color-card);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+/* 通用容器 */
+.container {
+  padding: 32rpx;
+}
+
+/* 分割线 */
+.divider {
+  height: 1rpx;
+  background: var(--color-border);
+  margin: 32rpx 0;
+}
+
+/* 标题样式 */
+.section-title {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 24rpx;
+}
+
+.section-subtitle {
+  font-size: 24rpx;
+  color: var(--color-text-light);
+  letter-spacing: 2rpx;
+}
+
+/* 毛玻璃效果（全局复用） */
+.glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: saturate(180%) blur(40rpx);
+  -webkit-backdrop-filter: saturate(180%) blur(40rpx);
+  border: 1rpx solid rgba(255,255,255,0.6);
+}
+
+.glass-dark {
+  background: rgba(44, 37, 32, 0.65);
+  backdrop-filter: saturate(180%) blur(40rpx);
+  -webkit-backdrop-filter: saturate(180%) blur(40rpx);
+  border: 1rpx solid rgba(255,255,255,0.08);
+}
+
+/* 占位图样式 */
+.placeholder-img {
+  background: linear-gradient(135deg, #E8E0D8 0%, #F0EBE5 50%, #E8E0D8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-light);
+  font-size: 24rpx;
+}

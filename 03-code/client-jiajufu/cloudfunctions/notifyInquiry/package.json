@@ -1,0 +1,9 @@
+{
+  "name": "notify-inquiry",
+  "version": "1.0.0",
+  "description": "有新询价时推送订阅消息给商家",
+  "main": "index.js",
+  "dependencies": {
+    "wx-server-sdk": "~2.6.3"
+  }
+}
