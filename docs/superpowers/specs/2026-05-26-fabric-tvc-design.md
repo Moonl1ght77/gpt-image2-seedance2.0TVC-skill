@@ -4,6 +4,41 @@
 
 30-35秒竖屏（9:16）品牌TVC，展示四套提花家居服通过面料灵物（魔毯）驱动的变装效果。场景从室内客厅→走廊→电梯→户外公园，情绪从慵懒到自信到时尚到轻盈。
 
+## 视觉风格：韦斯·安德森（Wes Anderson）
+
+### 摄影设备
+- **摄影机：** Arri Alexa Mini LF（数字）
+- **镜头：** Panavision Ultra Vista系列 / Master Prime系列
+- **胶片模拟：** Kodak Vision3 500T / 250D（后期调色模拟Kodachrome暖调）
+
+### 焦距分配
+| 段 | 焦距 | 景别 | 用途 |
+|---|---|---|---|
+| A（客厅） | 27mm | 远景/建立镜头 | 对称构图，沙发越肩，场景全貌 |
+| B（走廊横移） | 35mm | 全景跟拍 | 横向跟拍，保持人物全身+环境 |
+| C（电梯内部） | 50mm | 中景 | 人物居中，平面化构图 |
+| C（楼层特写） | 100mm | 特写 | 楼层指示器微距 |
+| C（开门转场） | 27mm | 远景→全景 | 低机位仰拍+60度摇镜头 |
+| D（公园横移） | 35mm | 全景跟拍 | 横向跟拍，同段B |
+
+### 光圈
+- 全片：f/4（保证面料纹理清晰，同时保留环境层次）
+- 特写段：f/2.8（浅景深突出细节）
+
+### 调色方向
+- 暖色调，低饱和度
+- 类似Kodachrome胶片色彩
+- 高光偏暖黄，阴影偏青灰
+- 无纯白无纯黑，整体柔和
+
+### 韦斯·安德森标志性构图
+- 严格对称，人物居中
+- 平面化布景，减少Z轴纵深
+- 横向平移运镜为主
+- 9:16竖屏适配：对称构图上下留白
+
+---
+
 ## 核心要素
 
 ### 人物
@@ -37,6 +72,8 @@
 
 **运镜：** 固定镜头，沙发越肩背面视角
 **机位：** 女主背后，沙发遮挡身体只露头部
+**摄影机：** Arri Alexa Mini LF + Panavision 27mm Master Prime
+**光圈：** f/4
 **画面层次：** 前景地板 → 中景沙发+女主头部 → 远景墙壁
 
 **时间轴：**
@@ -51,6 +88,8 @@
 ### 段B：横向左移 — 走廊变装（镜3-6，~12秒）
 
 **运镜：** 严格水平横向轨道左移，腰部略低机位
+**摄影机：** Arri Alexa Mini LF + Panavision 35mm Master Prime
+**光圈：** f/4
 **运动规则：** 不朝镜头、不远离、不Z轴位移，速度恒定
 
 **时间轴：**
@@ -69,6 +108,9 @@
 ### 段C：混合运镜 — 电梯段（镜7-12，~10秒）
 
 **运镜：** 背面跟拍 → 硬切电梯内部 → 垂直下摇 → 低机位 → 60度摇镜头
+**摄影机：** Arri Alexa Mini LF
+**焦距：** 35mm（背面跟拍）→ 50mm（电梯内部）→ 100mm（楼层特写）→ 27mm（开门转场）
+**光圈：** f/4（跟拍/内部）→ f/2.8（楼层特写）→ f/4（开门转场）
 
 **时间轴：**
 - 0-2s（背面跟拍）：机位切到女主背后腰部略低。女主牵金毛走向电梯门框，电梯内部可见。电梯按键"滴"声+灵物丝绸摩擦魔法音。
@@ -86,6 +128,8 @@
 ### 段D：横向左移+收束 — 公园（镜13-18，~8秒）
 
 **运镜：** 严格水平横向轨道左移 → 斜左上方移动 → 灵物飞走
+**摄影机：** Arri Alexa Mini LF + Panavision 35mm Master Prime
+**光圈：** f/4
 **机位高度：** 腰部略低
 
 **时间轴：**
@@ -126,19 +170,23 @@
 
 ### 通用规则
 - 画幅：9:16竖屏
-- 风格：写实摄影，非AI生成感
+- 风格：韦斯·安德森（Wes Anderson）电影风格，写实摄影，非AI生成感
+- 摄影机：Arri Alexa Mini LF
+- 胶片模拟：Kodak Vision3，Kodachrome暖调低饱和
 - 人物一致性：服装100%与参考图一致，面料纹理细节正确
 - 运镜：水平横向段严格不Z轴位移
 - 参考图嵌入格式：@[图片hash] + 描述
+- 构图：严格对称，人物居中，平面化布景
+- 调色：暖色调低饱和，高光偏暖黄，阴影偏青灰，无纯白无纯黑
 
 ## Seedance2.0 视频提示词
 
 ### 段A提示词
 
 ```
-【场景】某小区客厅内（夜 内）。现代简约客厅，灰色水泥质感墙壁，暖色调落地灯散射柔光，沙发长度长过画面宽度，深灰色布艺沙发。地板浅色木纹。整体氛围安静慵懒。
+【场景】某小区客厅内（夜 内）。韦斯·安德森电影风格。现代简约客厅，灰色水泥质感墙壁，暖色调落地灯散射柔光，沙发长度长过画面宽度，深灰色布艺沙发。地板浅色木纹。整体氛围安静慵懒。Kodak Vision3胶片质感，Kodachrome暖调低饱和。
 
-【运镜】固定镜头，沙发越肩背面视角。镜头与沙发背面平行，高度在女主头部略高。9:16竖屏纵向景深构图。所有运动严格固定不动，无推拉摇移。
+【运镜】固定镜头，沙发越肩背面视角。摄影机：Arri Alexa Mini LF + Panavision 27mm Master Prime。光圈f/4。镜头与沙发背面平行，高度在女主头部略高。9:16竖屏纵向景深构图。严格对称构图。所有运动严格固定不动，无推拉摇移。
 
 【动作】
 0-1秒：画面建立。女主@[女主脸部细节图] 只从沙发上方露出头部背面，棕色卷发，看不清面部和穿着。沙发完全遮挡身体。客厅安静，远处微弱时钟滴答声。
@@ -160,9 +208,9 @@
 ### 段B提示词
 
 ```
-【场景】1-1 某小区客厅内→玄关门口→水泥柱→横向走廊→电梯门口（夜 内）。客厅：深灰色布艺沙发，暖色调落地灯，浅色木纹地板。玄关：木门，门把手金属质感。水泥柱：巨型灰色混凝土结构柱，表面粗糙纹理，边框完全贴合画面。走廊：横向延伸，浅色地板+白色墙壁+天花板嵌入式顶灯，灯光依次排列。电梯：金属门框，现代公寓电梯。
+【场景】1-1 某小区客厅内→玄关门口→水泥柱→横向走廊→电梯门口（夜 内）。韦斯·安德森电影风格。客厅：深灰色布艺沙发，暖色调落地灯，浅色木纹地板。玄关：木门，门把手金属质感。水泥柱：巨型灰色混凝土结构柱，表面粗糙纹理，边框完全贴合画面。走廊：横向延伸，浅色地板+白色墙壁+天花板嵌入式顶灯，灯光依次排列。电梯：金属门框，现代公寓电梯。Kodak Vision3胶片质感，Kodachrome暖调低饱和。
 
-【运镜】严格横向轨道移动镜头。镜头始终与人物平行水平距离约3米侧面。镜头水平高度在女主腰部略低。运动严格水平横向从右向左平移，不朝镜头，不远离，不Z轴位移。速度恒定约每秒1.5米。9:16竖屏。女主全身始终入镜占画面竖向约1/2。
+【运镜】严格横向轨道移动镜头。摄影机：Arri Alexa Mini LF + Panavision 35mm Master Prime。光圈f/4。镜头始终与人物平行水平距离约3米侧面。镜头水平高度在女主腰部略低。运动严格水平横向从右向左平移，不朝镜头，不远离，不Z轴位移。速度恒定约每秒1.5米。9:16竖屏。女主全身始终入镜占画面竖向约1/2。人物居中对称构图。
 
 【动作】
 0-1秒：金光填满画面（承接段A结尾）。镜头开始从右向左水平移动。金光向画面右侧退去，像幕布一样从左向右揭开。
@@ -198,16 +246,16 @@
 ### 段C提示词
 
 ```
-【场景】电梯间+电梯内部+电梯门口。电梯间：现代公寓走廊电梯门前，金属门框，楼层指示器在门框上方。电梯内部：金属内壁反射，嵌顶灯光，空间紧凑。电梯门口外：低机位视角，电梯门框铺满画面上方。
+【场景】电梯间+电梯内部+电梯门口。韦斯·安德森电影风格。电梯间：现代公寓走廊电梯门前，金属门框，楼层指示器在门框上方。电梯内部：金属内壁反射，嵌顶灯光，空间紧凑。电梯门口外：低机位视角，电梯门框铺满画面上方。Kodak Vision3胶片质感，Kodachrome暖调低饱和。
 
 【运镜】多段运镜组合：
-- 0-2s：背面跟拍，机位在女主腰部略低，与女主同向移动进入电梯。
-- 2-5s：硬切电梯内部固定镜头，正面略偏侧视角。
-- 5-6s：硬切电梯门框满屏，垂直快速下摇（从门框上沿摇到楼层指示器）。
-- 6-7s：固定特写楼层指示器。
-- 7-8s：硬切电梯门框满屏，低机位固定。
-- 8-10s：电梯门打开，相机后退+上摇+右边60度摇镜头拉远变全景。
-9:16竖屏。
+- 0-2s：背面跟拍，机位在女主腰部略低，与女主同向移动进入电梯。Arri Alexa Mini LF + 35mm，f/4。
+- 2-5s：硬切电梯内部固定镜头，正面略偏侧视角。50mm，f/4。
+- 5-6s：硬切电梯门框满屏，垂直快速下摇。100mm，f/2.8。
+- 6-7s：固定特写楼层指示器。100mm，f/2.8。
+- 7-8s：硬切电梯门框满屏，低机位固定。27mm，f/4。
+- 8-10s：电梯门打开，相机后退+上摇+右边60度摇镜头拉远变全景。27mm，f/4。
+9:16竖屏。严格对称构图。
 
 【动作】
 0-1秒（背面跟拍）：画面切到女主@[女主脸部细节图] 背面，腰部略低机位。女主穿黄色提花家居服@[女主1ok] 牵金毛@[金毛] 走向电梯门框。电梯内部暖光可见。女主右手伸向电梯按钮。
@@ -242,9 +290,9 @@
 ### 段D提示词
 
 ```
-【场景】某公园内（日 外）。风和日丽，下午柔和自然光。绿树草坪，树木随轻风摆动。背景远处可见城市建筑轮廓。地面浅色铺装路面。整体氛围明亮轻松愉悦。
+【场景】某公园内（日 外）。韦斯·安德森电影风格。风和日丽，下午柔和自然光。绿树草坪，树木随轻风摆动。背景远处可见城市建筑轮廓。地面浅色铺装路面。整体氛围明亮轻松愉悦。Kodak Vision3胶片质感，Kodachrome暖调低饱和。
 
-【运镜】前半段（0-6s）：严格横向轨道移动镜头，从右向左水平平移。镜头与人物平行水平距离约3米侧面。腰部略低机位。速度恒定。不朝镜头，不远离，不Z轴位移。
+【运镜】前半段（0-6s）：严格横向轨道移动镜头，从右向左水平平移。摄影机：Arri Alexa Mini LF + Panavision 35mm Master Prime。光圈f/4。镜头与人物平行水平距离约3米侧面。腰部略低机位。速度恒定。不朝镜头，不远离，不Z轴位移。人物居中对称构图。
 后半段（6-8s）：镜头斜左上方移动，离开人物，向天空方向飞行。
 9:16竖屏。
 
@@ -277,40 +325,40 @@
 
 nano banana 2提示词：
 ```
-A massive concrete structural pillar filling the entire 9:16 vertical frame edge to edge. Raw gray concrete texture with visible formwork marks and surface imperfections. No gaps at frame borders. Industrial architectural element. Photorealistic, natural lighting, construction material detail.
+Wes Anderson film style. A massive concrete structural pillar filling the entire 9:16 vertical frame edge to edge. Raw gray concrete texture with visible formwork marks and surface imperfections. No gaps at frame borders. Industrial architectural element. Kodak Vision3 film grain, warm low-saturation color palette. Symmetrical composition. Photorealistic, natural lighting, construction material detail.
 ```
 
 ### 关键帧2：电梯门关闭
 
 nano banana 2提示词：
 ```
-Modern apartment elevator doors closed, brushed stainless steel finish, vertical 9:16 frame. Metal frame surrounding doors, floor indicator panel above showing red LED number. Warm hallway lighting reflecting on metal surface. Photorealistic, interior architecture.
+Wes Anderson film style. Modern apartment elevator doors closed, brushed stainless steel finish, vertical 9:16 frame. Metal frame surrounding doors, floor indicator panel above showing red LED number. Warm hallway lighting reflecting on metal surface. Kodak Vision3 film grain, Kodachrome warm tone. Symmetrical centered composition. Photorealistic, interior architecture.
 ```
 
 ### 关键帧3：电梯内部女主+金毛
 
 nano banana 2提示词（配合女主1ok参考图+金毛参考图）：
 ```
-Young woman @[女主1ok] standing inside modern elevator with golden retriever @[金毛] at her feet. Yellow jacquard loungewear set - round neck long sleeve top + drawstring pants. Confident stylish pose, slightly turned to camera left. Elevator interior with brushed metal walls reflecting warm overhead light. Golden retriever sitting calmly beside her legs. Vertical 9:16 frame. Photorealistic fashion photography.
+Wes Anderson film style. Young woman @[女主1ok] standing inside modern elevator with golden retriever @[金毛] at her feet. Yellow jacquard loungewear set - round neck long sleeve top + drawstring pants. Confident stylish pose, centered symmetrical composition. Elevator interior with brushed metal walls reflecting warm overhead light. Golden retriever sitting calmly beside her legs. Kodak Vision3 film grain, Kodachrome warm low-saturation palette. Vertical 9:16 frame. Photorealistic fashion photography, Arri Alexa Mini LF + 50mm lens.
 ```
 
 ### 关键帧4：楼层指示器特写
 
 nano banana 2提示词：
 ```
-Extreme close-up of elevator floor indicator panel. Red LED digital number "2" on brushed metal panel. Vertical 9:16 frame filling entire shot. Industrial design, clean typography. Photorealistic macro detail shot.
+Wes Anderson film style. Extreme close-up of elevator floor indicator panel. Red LED digital number "2" on brushed metal panel. Vertical 9:16 frame filling entire shot. Kodak Vision3 film grain, warm tone. Symmetrical centered composition. Industrial design, clean typography. Photorealistic macro detail shot, 100mm lens.
 ```
 
 ### 关键帧5：电梯门打开金毛先出
 
 nano banana 2提示词（配合金毛参考图）：
 ```
-Low angle shot from dog-eye-level height. Elevator doors opening from center, golden retriever @[金毛] head emerging first, nose toward camera, walking forward out of elevator. Metal elevator door frame visible at top of frame. Warm interior elevator light spilling out. Vertical 9:16 frame. Photorealistic, dramatic low angle perspective.
+Wes Anderson film style. Low angle shot from dog-eye-level height. Elevator doors opening from center, golden retriever @[金毛] head emerging first, nose toward camera, walking forward out of elevator. Metal elevator door frame visible at top of frame. Warm interior elevator light spilling out. Kodak Vision3 film grain, Kodachrome warm tone. Symmetrical composition. Vertical 9:16 frame. Photorealistic, dramatic low angle perspective, 27mm wide lens.
 ```
 
 ### 关键帧6：公园全景
 
 gpt-image2提示词：
 ```
-Beautiful sunny park全景, lush green trees swaying in gentle breeze, well-maintained lawn, light-colored paved pathway, soft afternoon natural light, distant city building silhouettes on horizon, clear blue sky with scattered clouds. Vertical 9:16 frame. Photorealistic landscape photography, warm color temperature, peaceful atmosphere.
+Wes Anderson film style. Beautiful sunny park, lush green trees swaying in gentle breeze, well-maintained lawn, light-colored paved pathway, soft afternoon natural light, distant city building silhouettes on horizon, clear blue sky with scattered clouds. Kodak Vision3 film grain, Kodachrome warm low-saturation palette. Symmetrical centered composition. Vertical 9:16 frame. Photorealistic landscape photography, warm color temperature, peaceful atmosphere.
 ```
